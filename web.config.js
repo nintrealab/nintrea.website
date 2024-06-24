@@ -1,5 +1,4 @@
 import * as projectInfo from './package.json';
-console.log(projectInfo);
 
 export const defaultSEO = {
     lang: "en",
@@ -10,7 +9,7 @@ export const defaultSEO = {
         name: "Nintrea Webiste",
         url: window.location.hostname + window.location.pathname
     },
-    description: "",
+    description: projectInfo.default.description,
     icons: {
         ico :`./assets/favicon.ico`,
         i76x76 :`./assets/apple-touch-icon.png`,
