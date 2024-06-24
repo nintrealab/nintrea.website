@@ -1,0 +1,14 @@
+# Package Files
+
+/node_modules
+.DS_Store
+.env
+
+# build logs
+package-lock.json
+
+# Public
+/public
+!/public/index.html
+/dist
+!/dist/index.html
