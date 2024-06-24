@@ -42,6 +42,19 @@ export default {
             {
                 test: /\.css$/i,
                 use: ['style-loader', 'css-loader', 'postcss-loader'],
+            },
+            {
+                test: /\.(png|jpg|gif)$/,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: '[name].[ext]',
+                            outputPath: 'images/',
+                            publicPath: 'images/'
+                        }
+                    }
+                ]
             }
         ]
     }

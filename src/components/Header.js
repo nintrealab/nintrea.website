@@ -1,16 +1,33 @@
-import React from "react"
+import React from "react";
+import { menu } from "../../data/menu.js";
+import Container from "./Container.js";
 
-export class Header extends React.Component {
-    constructor(params = {}) {
-        super(params)
-        this.params = params;
-    }
+import Logo from "../assets/apple-touch-icon.png";
 
-    render() {
-        return (<>Header: {JSON.stringify(this.params.data)}</>)
-    }
+
+
+export const Header = () => {
+    return (
+        <div className="w-full py-3 mx-auto bg-red-300">
+            <Container className={'flex w-full items-center justify-between'}>
+                <div>
+                    <img src={Logo} alt="Logo" width={50} height={50} />
+                </div>
+                <nav>
+                    <ul className="flex items-center justify-between">
+                        {menu.map((item, index) => (
+                            <li key={index}>
+                                <a href={item.path} className="px-2 py-1">{item.name}</a>
+                            </li>
+                        ))}
+                    </ul>
+                </nav>
+                <div>
+                    Logo
+                </div>
+            </Container>
+        </div>
+    );
 }
 
-// <MapHolder
-//   location={locationDataArray.locations.find(location => location.slug === ID)}
-//   />
+export default Header;
