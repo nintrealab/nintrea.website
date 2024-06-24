@@ -17,10 +17,6 @@ npm install
 ```sh
 npm run start
 ```
-#### --watch style 🌈
-```sh
-npm run watch
-```
 
 #### Production 🚀🌈♻️
 ```sh
