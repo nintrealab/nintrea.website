@@ -8,7 +8,5 @@
 package-lock.json
 
 # Public
-/public
-!/public/index.html
 /dist
 !/dist/index.html
