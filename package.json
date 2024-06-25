@@ -6,7 +6,6 @@
     "type": "module",
     "scripts": {
         "start": "webpack serve --mode=development --open --hot",
-        "style": "npx tailwind -i ./src/styles/app.css -o ./dist/style.css --watch",
         "build": "webpack --mode production"
     },
     "repository": {

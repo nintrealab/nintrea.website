@@ -4,8 +4,6 @@ import Container from "./Container.js";
 
 import Logo from "../assets/apple-touch-icon.png";
 
-
-
 export const Header = () => {
     return (
         <div className="w-full py-3 mx-auto bg-red-300">
