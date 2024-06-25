@@ -1,27 +1,36 @@
 import * as projectInfo from './package.json';
 
+import i32x32 from "./src/assets/favicon-32x32.png";
+import i16x16 from "./src/assets/favicon-16x16.png";
+import i512x512 from "./src/assets/android-chrome-512x512.png";
+import i192x192 from "./src/assets/android-chrome-192x192.png";
+import iAppleTouch from "./src/assets/apple-touch-icon.png";
+import screenShot1 from "./src/assets/screenshot-1.png";
+import Ico from "./src/assets/favicon.ico"
+
 export const defaultSEO = {
     lang: "en",
-    title: "Nintrea Webiste",
+    title: "Nintrea Website",
+    short_name: "Nintrea",
     canonical: window.location.hostname + window.location.pathname,
     author: {
-        image: `./assets/profile.png`,
-        name: "Nintrea Webiste",
+        image: `/images/profile.png`,
+        name: "Nintrea Website",
         url: window.location.hostname + window.location.pathname
     },
     description: projectInfo.default.description,
     icons: {
-        ico :`./assets/favicon.ico`,
-        i76x76 :`./assets/apple-touch-icon.png`,
-        i32x32 :`./assets/favicon-32x32.png`,
-        i16x16 :`./assets/favicon-16x16.png`,
+        ico : Ico,
+        i76x76 : iAppleTouch,
+        i32x32 : i32x32,
+        i16x16 : i16x16,
     },
     banner: {
-        cover : `./assets/home.webp`,
+        cover : screenShot1,
         type : "website",
         siteURL : "https://twitter.com/infoSophat",
     },
-    manifest: `./assets/site.webmanifest`,
-    feed: `./assets/feed.xml`,
+    manifest: `/site.webmanifest`,
+    feed: `/feed.xml`,
     themeColor: "#ffffff"
 }
