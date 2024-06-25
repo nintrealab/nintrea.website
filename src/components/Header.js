@@ -2,7 +2,7 @@ import React from "react";
 import { menu } from "../data/menu.js";
 import Container from "./Container.js";
 
-import Logo from "../assets/apple-touch-icon.png";
+import Logo from "../../public/logo.png";
 
 export const Header = () => {
     return (

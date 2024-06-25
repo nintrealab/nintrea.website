@@ -3,6 +3,7 @@ import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import WebpackPwaManifest from 'webpack-pwa-manifest';
+import CopyPlugin from 'copy-webpack-plugin';
 
 const __filename    = fileURLToPath(import.meta.url);
 const __dirname     = path.dirname(__filename);
@@ -29,14 +30,14 @@ const icons = [
 
 const screenshots = [
     {
-        src: `/static/mediascreenshot-1.png`,
+        src: `/static/media/screenshot-1.png`,
         sizes: "1200x600",
         type: "image/png",
         form_factor: "narrow",
         label: "Light Mode"
     },
     {
-        src: `/static/mediascreenshot-1.png`,
+        src: `/static/media/screenshot-1.png`,
         sizes: "1200x600",
         type: "image/png",
         form_factor: "wide",
@@ -60,19 +61,19 @@ export default {
             inject: "body",
         }),
         new ReactRefreshWebpackPlugin(),
-        new WebpackPwaManifest({
-            publicPath: './',
-            name: "Nintrea Webiste",
-            short_name: "Nintrea",
-            description: "Nintrea Webiste ជាគេហទំព័រដែលប្រមូលផ្ដុំទៅដោយឯកសារពហុព័ត៌មាន (អត្ថបទ រូបភាព សំឡេង និងវីដេអូ) សម្រាប់ចែករំលែក និងជាជំនួយដល់ការសិក្សា ព្រមទាំងការបង្រៀន ភាសាខ្មែរ របស់សិស្សានុសិស្ស មាតាបិតាសិស្ស និងលោកគ្រូ អ្នកគ្រូភាសាខ្មែរ។",
-            start_url: "/",
-            background_color: "#ffffff",
-            theme_color: "#ffffff",
-            crossorigin: 'use-credentials', //can be null, use-credentials or anonymous
-            icons: icons,
-            screenshots: screenshots,
-            filename: "site.webmanifest"
-        })
+        // new WebpackPwaManifest({
+        //     publicPath: './',
+        //     name: "Nintrea Webiste",
+        //     short_name: "Nintrea",
+        //     description: "Nintrea Webiste ជាគេហទំព័រដែលប្រមូលផ្ដុំទៅដោយឯកសារពហុព័ត៌មាន (អត្ថបទ រូបភាព សំឡេង និងវីដេអូ) សម្រាប់ចែករំលែក និងជាជំនួយដល់ការសិក្សា ព្រមទាំងការបង្រៀន ភាសាខ្មែរ របស់សិស្សានុសិស្ស មាតាបិតាសិស្ស និងលោកគ្រូ អ្នកគ្រូភាសាខ្មែរ។",
+        //     start_url: "/",
+        //     background_color: "#ffffff",
+        //     theme_color: "#ffffff",
+        //     crossorigin: 'use-credentials', //can be null, use-credentials or anonymous
+        //     icons: icons,
+        //     screenshots: screenshots,
+        //     filename: "site.webmanifest"
+        // }),
     ],
     devServer: {
         historyApiFallback: true,
@@ -103,8 +104,8 @@ export default {
                         loader: 'file-loader',
                         options: {
                             name: '[name].[ext]',
-                            outputPath: '/static/media/',
-                            publicPath: '/static/media/'
+                            outputPath: '/static/media//',
+                            publicPath: '/static/media//'
                         }
                     }
                 ]
