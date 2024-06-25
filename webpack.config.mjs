@@ -6,7 +6,7 @@ import WebpackPwaManifest from 'webpack-pwa-manifest';
 
 const __filename    = fileURLToPath(import.meta.url);
 const __dirname     = path.dirname(__filename);
-
+// return
 const icons = [
     {
         src: `${path.resolve(__dirname, "src")}/assets/android-chrome-192x192.png`,
@@ -29,14 +29,14 @@ const icons = [
 
 const screenshots = [
     {
-        src: `/images/screenshot-1.png`,
+        src: `/static/mediascreenshot-1.png`,
         sizes: "1200x600",
         type: "image/png",
         form_factor: "narrow",
         label: "Light Mode"
     },
     {
-        src: `/images/screenshot-1.png`,
+        src: `/static/mediascreenshot-1.png`,
         sizes: "1200x600",
         type: "image/png",
         form_factor: "wide",
@@ -44,25 +44,24 @@ const screenshots = [
     }
 ]
 
-
 export default {
     entry: "./src/index.js",
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: "js/[name].bundle.js?id=[contenthash:10]",
-        clean: true,
+        filename: "static/js/[name].bundle.js?id=[contenthash:10]",
+        clean:true,
         publicPath: '/',
     },
     plugins: [
         new HtmlWebpackPlugin({
             template: "./public/index.html",
             minify: true,
-            enabled: true,
+            enabled: false,
             inject: "body",
         }),
         new ReactRefreshWebpackPlugin(),
         new WebpackPwaManifest({
-            publicPath: '/',
+            publicPath: './',
             name: "Nintrea Webiste",
             short_name: "Nintrea",
             description: "Nintrea Webiste ជាគេហទំព័រដែលប្រមូលផ្ដុំទៅដោយឯកសារពហុព័ត៌មាន (អត្ថបទ រូបភាព សំឡេង និងវីដេអូ) សម្រាប់ចែករំលែក និងជាជំនួយដល់ការសិក្សា ព្រមទាំងការបង្រៀន ភាសាខ្មែរ របស់សិស្សានុសិស្ស មាតាបិតាសិស្ស និងលោកគ្រូ អ្នកគ្រូភាសាខ្មែរ។",
@@ -104,8 +103,8 @@ export default {
                         loader: 'file-loader',
                         options: {
                             name: '[name].[ext]',
-                            outputPath: '/images/',
-                            publicPath: '/images/'
+                            outputPath: '/static/media/',
+                            publicPath: '/static/media/'
                         }
                     }
                 ]
