@@ -2,7 +2,7 @@ import React from "react";
 import { menu } from "../data/menu.js";
 import Container from "./Container.js";
 
-import Logo from "../../public/logo.png";
+import Logo from "../assets/logo.png";
 
 export const Header = () => {
     return (
