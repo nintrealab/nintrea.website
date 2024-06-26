@@ -1,5 +1,5 @@
 import React from "react"
-import { defaultSEO } from "../../web.config.js";
+import { defaultSEO } from "../configs/web.js";
 import { createPortal } from "react-dom";
 
 export class SEO extends React.Component {
