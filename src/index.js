@@ -17,13 +17,13 @@ root.render(
             <Route path="/" exact element={<Home />} />
 
             <Route path="/blogs" element={<Blog/>} />
-            <Route path="/blogs/:title" element={<Blog/>} />
+            <Route path="/blog/:title" element={<Blog/>} />
 
             <Route path="/projects" element={<Projects/>} />
-            <Route path="/projects/:title" element={<Projects/>} />
+            <Route path="/project/:title" element={<Projects/>} />
 
             <Route path="/about-us" element={<About/>} />
-            <Route path="/about-us/:author" element={<About/>} />
+            <Route path="/about/:author" element={<About/>} />
 
             {/* Not found page */}
             <Route path="*" element={<>No found</>} />
