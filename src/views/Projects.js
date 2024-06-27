@@ -1,21 +1,17 @@
 import React from 'react';
 import { Header } from '../components/Header.js';
-import { useParams } from 'react-router-dom';
-import Container from '../components/Container.js';
+import { Container } from '../components/Container.js';
 
-
-const Blog = () => {
-
-    let { page } = useParams();
+const Projects = () => {
 
     return (
         <div className='h-screen dark:bg-slate-950'>
             <Header/>
             <Container>
-                <div>Welcome to Blogs!</div>
+                <div>Welcome to Projects!</div>
             </Container>
         </div>
     );
 }
 
-export default Blog;
+export default Projects;
