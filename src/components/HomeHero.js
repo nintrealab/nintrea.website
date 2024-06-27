@@ -2,9 +2,10 @@ import React from 'react';
 import Container from './Container.js';
 import { useTranslation } from 'react-i18next';
 import GridBackground from './GridBackground.js';
+import { cn } from './MergeClass.js';
 
 export const HomeHero = () => {
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
 
     return (
         <div className='w-full h-[35rem]'>
@@ -13,7 +14,7 @@ export const HomeHero = () => {
                 maskImage: "linear-gradient(to bottom, transparent, black)",
                 WebkitMaskImage: "linear-gradient(to bottom, transparent, black)"
             }}></div>
-            <Container className={'flex flex-col w-full max-w-5xl h-full items-center justify-center relative mx-auto pt-20 sm:pt-24 lg:pt-32'}>
+            <Container className={cn('flex flex-col w-full max-w-5xl h-full items-center justify-center relative mx-auto pt-20 sm:pt-24', i18n.language == "km" ? "lg:pt-24" : "lg:pt-32")}>
                 <h1 className='text-4xl font-extrabold tracking-tight text-center text-slate-900 sm:text-5xl lg:text-6xl dark:text-white'>{t('title')}</h1>
                 <p className="max-w-3xl mx-auto mt-6 text-lg text-center text-slate-600 dark:text-slate-400">{t('description')}</p>
                 <div className="flex justify-center mt-6 space-x-6 text-sm sm:mt-10">
