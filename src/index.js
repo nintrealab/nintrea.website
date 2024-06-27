@@ -12,10 +12,12 @@ root.render(
         <Routes>
             {/* Static routes */}
             <Route path="/" exact element={<Home />} />
-            <Route path="/about/:who" element={<About />} />
+            <Route path="/about-us" element={<About />} />
 
             {/* dynamic routes  params :title */}
-            <Route path="/blog/:title" element={<Blog/>} />
+            {/* <Route path="/:title" element={<Blog/>} /> */}
+            <Route path="/blogs" element={<Blog/>} />
+            <Route path="/projects" element={<Blog/>} />
 
             {/* Not found page */}
             <Route path="*" element={<>Not found</>} />

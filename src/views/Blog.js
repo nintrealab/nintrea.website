@@ -10,13 +10,13 @@ const Blog = () => {
     let { title } = useParams();
 
     return (
-        <>
+        <div className='h-screen dark:bg-slate-950'>
+            <Header/>
             <SEO/>
-            <Header data={title}/>
             <div>Welcome to {title} Blog</div>
             <Link to="/">Home</Link>
             <Link to="/about">About</Link>
-        </>
+        </div>
     );
 }
 

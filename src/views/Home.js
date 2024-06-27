@@ -5,11 +5,9 @@ import { SEO } from '../components/SEO.js';
 import { Container } from '../components/Container.js';
 
 const Home = () => {
-    const test = {
-        hey: "Home"
-    }
+
     return (
-        <>
+        <div className='h-screen dark:bg-slate-950'>
             <Header/>
             <Container>
                 <SEO/>
@@ -17,7 +15,7 @@ const Home = () => {
                 <Link to="/">Home</Link>
                 <Link to="/about">About</Link>
             </Container>
-        </>
+        </div>
     );
 }
 
