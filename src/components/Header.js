@@ -3,21 +3,22 @@ import { Container } from "./Container";
 import { ModeToggle } from "./button-toggle";
 import { Logo } from "./logo";
 import { defaultMeta } from "@/data/meta";
+import Link from "next/link";
 
 export const Header = () => {
     return (
         <div className="sticky top-0 z-20 w-full py-3 mx-auto scroll-smooth backdrop-blur-sm dark:bg-white/5 bg-white/50">
             <Container className={'flex w-full items-center justify-between'}>
                 <div>
-                    <a href="/" className="pb-2 cursor-pointer" aria-label={defaultMeta.title + ` Logo`}>
+                    <Link href="/" className="pb-2 cursor-pointer" aria-label={defaultMeta.title + ` Logo`}>
                         <Logo/>
-                    </a>
+                    </Link>
                 </div>
                 <nav>
                     <ul role="menu" className="flex items-center justify-between">
                         {menu.map((item, index) =>
                             <li key={index} role="presentation">
-                                <a href={item.path} role="menuitem" className="px-2 py-1 font-medium transition-colors dark:text-white/70 dark:hover:text-white">{item.name}</a>
+                                <Link href={item.path} role="menuitem" className="px-2 py-1 font-medium transition-colors dark:text-white/70 dark:hover:text-white">{item.name}</Link>
                             </li>
                         )}
                     </ul>
