@@ -1,5 +1,5 @@
 import { menu } from "@/data/module";
-import { Container } from "./Container";
+import { Container } from "./container";
 import { ModeToggle } from "./button-toggle";
 import { Logo } from "./logo";
 import { defaultMeta } from "@/data/meta";

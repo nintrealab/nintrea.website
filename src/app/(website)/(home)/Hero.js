@@ -1,5 +1,5 @@
-import { Container } from "@/components/Container";
-import { GridBackground } from "./Background";
+import { Container } from "@/components/container";
+import { GridBackground } from "./background";
 import { cn } from "@/lib/utils";
 
 export const Hero = () => {
