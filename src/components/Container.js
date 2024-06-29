@@ -1,4 +1,4 @@
-import { cn } from "../helper/cn";
+import { cn } from "@/lib/utils";
 
 export const Container = ({ children, className }) => {
     return (
