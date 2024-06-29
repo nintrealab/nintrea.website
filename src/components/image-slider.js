@@ -1,6 +1,6 @@
 import Image from "next/image"
 
-export const Slider = ({
+export const ImageSlider = ({
     reverse = "false",
     style = {
         "--width": "200px",

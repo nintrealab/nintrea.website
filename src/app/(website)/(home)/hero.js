@@ -13,7 +13,7 @@ export const Hero = () => {
             <Container className={cn('flex flex-col w-full max-w-5xl h-full items-center justify-center relative mx-auto pt-20 sm:pt-20')}>
                 <h1 className='text-4xl font-extrabold tracking-tight text-center text-slate-900 sm:text-5xl lg:text-6xl dark:text-white'>
                     {`Sharing knowledge and`}
-                    <span className='inline-block text-transparent bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 bg-clip-text'>
+                    <span className='inline-block lg:text-7xl text-transparent bg-gradient-to-r from-primary via-green-500 to-[#064073] bg-clip-text'>
                         {`experience`}
                     </span>
                 </h1>
