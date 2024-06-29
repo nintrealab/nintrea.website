@@ -1,5 +1,5 @@
-import { Container } from "@/components/Container";
-import { GridBackground } from "./Background";
+import { Container } from "@/components/container";
+import { GridBackground } from "./background";
 import { cn } from "@/lib/utils";
 
 export const Hero = () => {
@@ -10,9 +10,12 @@ export const Hero = () => {
                 maskImage: "linear-gradient(to bottom, transparent, black)",
                 WebkitMaskImage: "linear-gradient(to bottom, transparent, black)"
             }}></div>
-            <Container className={cn('flex flex-col w-full max-w-5xl h-full items-center justify-center relative mx-auto pt-20 sm:pt-24')}>
+            <Container className={cn('flex flex-col w-full max-w-5xl h-full items-center justify-center relative mx-auto pt-20 sm:pt-20')}>
                 <h1 className='text-4xl font-extrabold tracking-tight text-center text-slate-900 sm:text-5xl lg:text-6xl dark:text-white'>
-                    {`Sharing knowledge and experience`}
+                    {`Sharing knowledge and`}
+                    <span className='inline-block lg:text-7xl text-transparent bg-gradient-to-r from-primary via-green-500 to-[#064073] bg-clip-text'>
+                        {`experience`}
+                    </span>
                 </h1>
                 <p className="max-w-3xl mx-auto mt-6 text-lg text-center text-slate-600 dark:text-slate-400">
                     {`Compiled with various documents to support the study of students or those who like to research documents on the Internet.`}
