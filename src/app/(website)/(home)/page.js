@@ -3,6 +3,7 @@ import { Container } from "@/components/container";
 import { Header } from "../../../components/header";
 import { defaultMeta } from "@/data/meta";
 import { Slider as SliderComponent } from "@/components/image-slider";
+import { Hero } from "./hero";
 import Slide1 from "@/assets/images/slides/slider2_1.png";
 import Slide2 from "@/assets/images/slides/slider2_2.png";
 import Slide3 from "@/assets/images/slides/slider2_3.png";
@@ -12,7 +13,6 @@ import Slide6 from "@/assets/images/slides/slider2_6.png";
 import Slide7 from "@/assets/images/slides/slider2_7.png";
 import Slide8 from "@/assets/images/slides/slider2_8.png";
 import Slide9 from "@/assets/images/slides/slider2_9.png";
-import { Hero } from "./hero";
 export const metadata = defaultMeta;
 
 export default function Home() {
