@@ -12,7 +12,7 @@ export const defaultMeta = {
     ],
     generator: info.name,
     keywords: ["nintrea", "nintrea website", "nintrea shared", "nintrea elibary"],
-    referrer: "origin",
+    // referrer: "origin",
     themeColor: [
         { media: "(prefers-color-scheme: dark)", color: "#000000" },
         { media: "(prefers-color-scheme: light)", color: "#ffffff" }
@@ -23,10 +23,10 @@ export const defaultMeta = {
     },
     creator: "Nintrea Team",
     publisher: "Vercel, Netlify",
-    robots: {
-        index: true,
-        follow: true
-    },
+    // robots: {
+    //     index: true,
+    //     follow: true
+    // },
     icons: info.logo,
     // manifest: "/manifest.json",
     // favicon: "/favicon.ico",
@@ -46,12 +46,12 @@ export const defaultMeta = {
         creator: "@infoNintrea",
         "images": info.logo
     },
-    verification:  {
-        verification:
-        {
-            google: "1234567890",
-            yandex: "1234567890",
-            "me": "1234567890"
-        }
-    }
+    // verification:  {
+    //     verification:
+    //     {
+    //         google: "1234567890",
+    //         yandex: "1234567890",
+    //         "me": "1234567890"
+    //     }
+    // }
 };
