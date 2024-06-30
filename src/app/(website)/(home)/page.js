@@ -80,6 +80,7 @@ export default function Home() {
                     }}/> */}
 
                     <CardSlider
+                        className={'hidden xl:block'}
                         data={[
                             {
                                 src: "https://github.com/pphatdev.png",
@@ -115,6 +116,7 @@ export default function Home() {
                             "--speed": "20s"
                         }}
                     />
+
                 </div>
             </Container>
         </>

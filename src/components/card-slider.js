@@ -1,7 +1,9 @@
+import { cn } from "@/lib/utils"
 import Image from "next/image"
 
 export const CardSlider = ({
     reverse = "false",
+    className,
     style = {
         "--width": "200px",
         "--height": "200px",
@@ -11,7 +13,7 @@ export const CardSlider = ({
     data = []
 }) => {
     return(
-        <div className="slider" reverse={reverse} style={style}>
+        <div className={cn("slider", className)} reverse={reverse} style={style}>
             <div className="list">
                 { data.map((item, index) => {
                     return(

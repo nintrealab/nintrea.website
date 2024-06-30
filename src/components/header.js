@@ -4,6 +4,7 @@ import { ModeToggle } from "./button-toggle";
 import { Logo } from "./logo";
 import { defaultMeta } from "@/data/meta";
 import Link from "next/link";
+import { SmallScreenMenu } from "./small-screen-menu";
 
 export const Header = () => {
     return (
@@ -14,7 +15,7 @@ export const Header = () => {
                         <Logo/>
                     </Link>
                 </div>
-                <nav>
+                <nav className="hidden sm:flex">
                     <ul role="menu" className="flex items-center justify-between">
                         {menu.map((item, index) =>
                             <li key={index} role="presentation">
@@ -30,6 +31,7 @@ export const Header = () => {
                         </svg>
                     </a>
                     <ModeToggle />
+                    <SmallScreenMenu className="sm:hidden"/>
                 </div>
             </Container>
         </div>
