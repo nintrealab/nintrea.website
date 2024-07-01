@@ -2,7 +2,7 @@
 import { Container } from "@/components/container";
 import { Header } from "../../../components/header";
 import { defaultMeta } from "@/data/meta";
-import {footer } from "@/components/Ffooter";
+import { footer } from "@/components/footer";
 
 export const metadata = defaultMeta;
 import { ImageSlider } from "@/components/image-slider";

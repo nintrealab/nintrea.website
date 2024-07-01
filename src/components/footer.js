@@ -9,7 +9,7 @@ import { useRouter } from "next/navigation";
 
 // import Logo from "../assets/logo.png";
 
-export const Ffooter = () => {
+export const footer = () => {
 
     const route = useRouter()
 
