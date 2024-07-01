@@ -1,9 +1,15 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    matcher: [
-        '/((?!api|_next/static|_next/image|favicon.ico).*)',
-        { source: '/' },
-    ],
+    images: {
+        remotePatterns: [
+            {
+                protocol: 'https',
+                hostname: 'github.com',
+                port: '',
+                pathname: '/*',
+            },
+        ],
+    },
 };
 
 export default nextConfig;
