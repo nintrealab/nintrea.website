@@ -4,17 +4,18 @@ import { ModeToggle } from "./button-toggle";
 import { Logo } from "./logo";
 import { defaultMeta } from "@/data/meta";
 import Link from "next/link";
+import { SmallScreenMenu } from "./small-screen-menu";
 
 export const Header = () => {
     return (
-        <div className="sticky top-0 z-20 w-full py-3 mx-auto transition-all scroll-smooth backdrop-blur-sm dark:bg-white/5 bg-white/50">
+        <div className="sticky top-0 z-20 w-full py-3 mx-auto transition-all border-b border-foreground/10 scroll-smooth backdrop-blur-sm bg-background/0.5">
             <Container className={'flex w-full items-center justify-between'}>
                 <div>
                     <Link href="/" className="pb-2 cursor-pointer" aria-label={defaultMeta.title + ` Logo`}>
                         <Logo/>
                     </Link>
                 </div>
-                <nav>
+                <nav className="hidden sm:flex">
                     <ul role="menu" className="flex items-center justify-between">
                         {menu.map((item, index) =>
                             <li key={index} role="presentation">
@@ -30,6 +31,7 @@ export const Header = () => {
                         </svg>
                     </a>
                     <ModeToggle />
+                    <SmallScreenMenu className="sm:hidden"/>
                 </div>
             </Container>
         </div>

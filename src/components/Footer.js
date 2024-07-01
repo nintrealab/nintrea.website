@@ -22,7 +22,7 @@ export const Footer = () => {
                     <Link href="/">
                         <LinkedInLogoIcon className="size-6"/>
                     </Link>
-                    <Link href="https://github.com/nintrealab">
+                    <Link href="https://github.com/nintrealab" target="blank">
                         <GitHubLogoIcon className="size-6" />
                         
                     </Link>
