@@ -17,7 +17,6 @@ import Slide7 from "@/assets/images/slides/slider2_7.png";
 import Slide8 from "@/assets/images/slides/slider2_8.png";
 import Slide9 from "@/assets/images/slides/slider2_9.png";
 import { CardSlider } from "@/components/card-slider";
->>>>>>> d0738491d34672af9b401592e75dd81c7452cefc
 export default function Home() {
 
     const data = [

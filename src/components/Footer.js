@@ -1,5 +1,4 @@
 import React from "react";
-import { Container } from "./Container";
 import { Logo } from "./logo";
 import { GitHubLogoIcon, InstagramLogoIcon, LinkedInLogoIcon, TwitterLogoIcon } from "@radix-ui/react-icons";
 import Link from "next/link";
@@ -9,29 +8,30 @@ import Link from "next/link";
 
 export const Footer = () => {
     return (
-        // <div className="w-full py-3 mx-auto bg-background">
         <>
+
         <div className="flex flex-col items-center justify-between ">
-                <Logo className=" h-32" />
-                <div className="flex">
+                <Logo className=" mt-10" />
+                <div className="flex gap-2">
                     <Link href="/">
-                        <InstagramLogoIcon className="w-12 h-12"/>
+                        <buntton className=""><InstagramLogoIcon className="size-6"/></buntton>
                     </Link>
                     <Link href="/">
-                        <TwitterLogoIcon className="w-12 h-12"/>
+                        <TwitterLogoIcon className="size-6"/>
                     </Link>
                     <Link href="/">
-                        <LinkedInLogoIcon className="w-12 h-12"/>
+                        <LinkedInLogoIcon className="size-6"/>
                     </Link>
-                    <Link href="/">
-                        <GitHubLogoIcon className="w-12 h-12"/> 
+                    <Link href="https://github.com/nintrealab">
+                        <GitHubLogoIcon className="size-6" />
+                        
                     </Link>
                 </div>
                 <div className="flex w-full justify-between justify-items-center">
                     <div className="my-12"></div>
-                    <div className="">
+                    <div className="justify-between justify-items-center text-center my-10">
                         <p>Copyright 2023 - Absolute Post. All rights reserved. No part of this website may be reproduced without permission.</p>
-                        <p>Copyright 2023 - Absolute Post. All rights reserved. No part of this website may be reproduced without permission.</p>
+                        <p>Please review our Terms and Conditions. Please review our Privacy Policy.</p>
                     </div>
                     <div className="flex"></div>   
                 </div>
