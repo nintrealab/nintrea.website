@@ -1,9 +1,7 @@
-<div align="center">
-    <h1>Nintrea Webiste 🌈🌞 </h1>
-    <p>Nintrea Webiste ជាគេហទំព័រដែលប្រមូលផ្ដុំទៅដោយឯកសារពហុព័ត៌មាន (អត្ថបទ រូបភាព សំឡេង និងវីដេអូ) សម្រាប់ចែករំលែក និងជាជំនួយដល់ការសិក្សា ព្រមទាំងការបង្រៀន ភាសាខ្មែរ របស់សិស្សានុសិស្ស មាតាបិតាសិស្ស និងលោកគ្រូ អ្នកគ្រូភាសាខ្មែរ។</p>
-</div>
+# Nintrea Webiste 🌈🌞
 
-<br>
+Compiled with various documents to support the study of students or those who like to research documents on the Internet.
+
 <br>
 
 ## To Start Project ♻️
@@ -12,10 +10,10 @@
 npm install
 ```
 
-#### Starting Project 🚀
+#### Develop Project 🚀
 
 ```sh
-npm run start
+npm run dev
 ```
 
 #### Production 🚀🌈♻️
@@ -23,9 +21,16 @@ npm run start
 npm run build
 ```
 
+#### Start Production 🚀🌈♻️
+```sh
+npm run start
 
-<h1 align="center">👽 Contributor 👽</h1>
+# Or
 
-<p align="center">
-<img src="https://contrib.rocks/image?repo=nintrealab/nintrea.website" width="50" height="50" align="center" />
-</p>
+npm start
+```
+
+
+# Contributors
+
+<img src="https://contrib.rocks/image?repo=nintrealab/nintrea.website" width="100%" height="50"/>
