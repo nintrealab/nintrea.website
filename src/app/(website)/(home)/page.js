@@ -2,7 +2,7 @@
 import { Container } from "@/components/container";
 import { Header } from "../../../components/header";
 import { defaultMeta } from "@/data/meta";
-import { Footer } from "../../../components/Footer";
+import {footer } from "@/components/Ffooter";
 
 export const metadata = defaultMeta;
 import { ImageSlider } from "@/components/image-slider";
@@ -219,7 +219,7 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
-                <Footer/>
+                <footer/>
             </Container>
         </>
     );
