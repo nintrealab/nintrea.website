@@ -19,6 +19,7 @@ import Slide9 from "@/assets/images/slides/slider2_9.png";
 import { CardSlider } from "@/components/card-slider";
 import Image from "next/image";
 import Link from "next/link";
+import { PostHeader } from "@/components/post-header";
 
 export default function Home() {
 
@@ -35,7 +36,7 @@ export default function Home() {
                         "--quantity": "-7",
                         "--paused": "running"
                     }}/> */}
-
+                <PostHeader />
                     <CardSlider
                         className={'hidden xl:block'}
                         data={[
