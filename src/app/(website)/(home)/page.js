@@ -2,6 +2,9 @@
 import { Container } from "@/components/container";
 import { Header } from "../../../components/header";
 import { defaultMeta } from "@/data/meta";
+import { Footer } from "../../../components/Footer";
+
+export const metadata = defaultMeta;
 import { ImageSlider } from "@/components/image-slider";
 import { Hero } from "./hero";
 import Slide1 from "@/assets/images/slides/slider2_1.png";
@@ -16,7 +19,6 @@ import Slide9 from "@/assets/images/slides/slider2_9.png";
 import { CardSlider } from "@/components/card-slider";
 import Image from "next/image";
 import Link from "next/link";
-export const metadata = defaultMeta;
 
 export default function Home() {
 
@@ -115,6 +117,7 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
+                <Footer/>
             </Container>
         </>
     );
