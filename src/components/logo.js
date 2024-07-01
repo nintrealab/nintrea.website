@@ -116,27 +116,21 @@ const path2 = (`M218.741 175.356V167.839H224.038V169.705H223.292V171.794L224.971
 184.496V200.723C489.214 203.657 487.349 205.149 483.568 205.199L482.505 204.975L481.535 204.509L479.838 203.353L476.649
 200.089L476.108 199.977V205.199H470.512V188.413H468.721V185.428H476.108V196.265H477.264Z`)
 
-const Logo = React.forwardRef(
-    ({ className }) => {
-        return (
-            <svg width="512" height="267" className={cn("h-12 w-full text-foreground", className)} viewBox="0 0 512 267" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                <path d={path1} fill="url(#paint0_linear_518_33)"/>
-                <path d={path2} fill="url(#paint1_linear_518_33)"/>
-                <defs>
-                    <linearGradient id="paint0_linear_518_33" x1="255.5" y1="56" x2="255.5" y2="185" gradientUnits="userSpaceOnUse">
-                        <stop stopColor="#00498E"/>
-                        <stop offset="1" stopColor="currentColor"/>
-                    </linearGradient>
-                    <linearGradient id="paint1_linear_518_33" x1="355.241" y1="176.199" x2="355.241" y2="211.199" gradientUnits="userSpaceOnUse">
-                        <stop stopColor="#00498E"/>
-                        <stop offset="1" stopColor="currentColor"/>
-                    </linearGradient>
-                </defs>
-            </svg>
-        )
-    }
-)
-
-Logo.displayName = "Logo"
-
-export { Logo }
+export const Logo = ({ className }) => {
+    return (
+        <svg width="512" height="267" className={cn("h-12 w-full text-foreground", className)} viewBox="0 0 512 267" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d={path1} fill="url(#paint0_linear_518_33)"/>
+            <path d={path2} fill="url(#paint1_linear_518_33)"/>
+            <defs>
+                <linearGradient id="paint0_linear_518_33" x1="255.5" y1="56" x2="255.5" y2="185" gradientUnits="userSpaceOnUse">
+                    <stop stopColor="#00498E"/>
+                    <stop offset="1" stopColor="currentColor"/>
+                </linearGradient>
+                <linearGradient id="paint1_linear_518_33" x1="355.241" y1="176.199" x2="355.241" y2="211.199" gradientUnits="userSpaceOnUse">
+                    <stop stopColor="#00498E"/>
+                    <stop offset="1" stopColor="currentColor"/>
+                </linearGradient>
+            </defs>
+        </svg>
+    )
+}
