@@ -32,7 +32,7 @@ export default function CardBanner() {
                 </p>
                 </div>
                 <div className="flex self-center flex-shrink-0">
-                
+
                 </div>
             </div>
         </div>
