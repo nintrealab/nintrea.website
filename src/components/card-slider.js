@@ -17,7 +17,7 @@ export const CardSlider = ({
             <div className="list">
                 { data.map((item, index) => {
                     return(
-                        <div className="px-4 py-5 border rounded-lg bg-background border-primary/10 sm:px-6 item" style={{ "--position": index + 1 }}>
+                        <div key={index} className="px-4 py-5 border rounded-lg bg-background border-primary/10 sm:px-6 item" style={{ "--position": index + 1 }}>
                             <div className="flex space-x-3">
                                 <div className="flex-shrink-0">
                                     <Image src={item.src} alt={item.title} width={38} height={38} className="rounded-full" style={{
