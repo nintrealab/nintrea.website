@@ -15,7 +15,7 @@ export const ImageSlider = ({
             <div className="list">
                 { data.map((item, index) => {
                     return(
-                        <div className="item" style={{ "--position": index + 1 }}>
+                        <div key={index} className="item" style={{ "--position": index + 1 }}>
                             <Image loading="lazy" src={item.src} alt={item.alt} width={225} height={225} style={{
                                 width: "100%",
                                 height: "auto",

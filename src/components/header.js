@@ -1,3 +1,4 @@
+"use client"
 import { menu } from "@/data/module";
 import { Container } from "./container";
 import { ModeToggle } from "./button-toggle";
@@ -5,8 +6,11 @@ import { Logo } from "./logo";
 import { defaultMeta } from "@/data/meta";
 import Link from "next/link";
 import { SmallScreenMenu } from "./small-screen-menu";
+import { usePathname } from 'next/navigation'
+import { cn } from "@/lib/utils";
 
 export const Header = () => {
+    const path = usePathname();
     return (
         <div className="sticky top-0 z-20 w-full py-3 mx-auto transition-all border-b border-foreground/10 scroll-smooth backdrop-blur-sm bg-background/0.5">
             <Container className={'flex w-full items-center justify-between'}>
@@ -19,7 +23,13 @@ export const Header = () => {
                     <ul role="menu" className="flex items-center justify-between">
                         {menu.map((item, index) =>
                             <li key={index} role="presentation">
-                                <Link href={item.path} role="menuitem" className="px-2 py-1 font-medium transition-colors dark:text-white/70 dark:hover:text-white">{item.name}</Link>
+                                <Link
+                                    href={item.path}
+                                    role="menuitem"
+                                    className={cn(item.path == path ? 'text-primary dark:text-white' : ' dark:text-white/70', 'px-2 py-1 font-medium transition-colors dark:hover:text-white')}
+                                >
+                                    {item.name}
+                                </Link>
                             </li>
                         )}
                     </ul>
