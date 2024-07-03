@@ -19,6 +19,7 @@ import Slide9 from "@/assets/images/slides/slider2_9.png";
 import { CardSlider } from "@/components/card-slider";
 import Image from "next/image";
 import Link from "next/link";
+import { Author } from "@/components/author";
 
 export default function Home() {
 
@@ -26,8 +27,8 @@ export default function Home() {
         <>
             <Header/>
             <Hero/>
-
             <Container>
+            <Author/>
                 <div className="flex flex-col items-center justify-center gap-4 animate-fade-in">
                     {/* <ImageSlider data={data} reverse={'true'} style={{
                         "--width": "200px",
