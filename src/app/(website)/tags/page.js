@@ -3,7 +3,7 @@ import { Header } from "@/components/header";
 import { defaultMeta } from "@/data/meta";
 import { Footer } from "@/components/Footer";
 import { Hero } from "./hero";
-import { ContentBackground } from "../blogs/(blogs)/content-background";
+import { ContentBackground } from "@/app/(website)/blogs/(blogs)/content-background";
 
 export const metadata = defaultMeta;
 
