@@ -62,7 +62,7 @@ export const Article = ({ data }) => {
                     <p className="mt-2 mb-3 line-clamp-3">
                         {data?.description}
                     </p>
-                    <Link className="flex items-center text-sm font-medium text-sky-500" href="/post-header">
+                    <Link className="flex items-center text-sm font-medium text-sky-500" href="/blogs/post-header">
                         <span className="absolute -inset-y-2.5 -inset-x-4 md:-inset-y-4 md:-inset-x-6 sm:rounded-2xl"></span>
                         <span className="relative text-xs sm:text-sm">
                             Read more<span className="sr-only" href="/">{data?.title}</span>
