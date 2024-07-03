@@ -18,6 +18,8 @@
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "date-fns": "^3.6.0",
+    "fs": "^0.0.1-security",
+    "glob": "^10.4.2",
     "next": "14.2.4",
     "next-i18n-router": "^5.5.0",
     "next-themes": "^0.3.0",
