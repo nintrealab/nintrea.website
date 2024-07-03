@@ -4,6 +4,8 @@ export const defaultMeta = {
     title: info.name,
     description: info.description,
     applicationName: info.name,
+    canonical: info.url,
+    metadataBase: info.url,
     authors: [
         { name: "LEAT Sophat", url: "https://leatsophat.me" },
         { name: "HOL Bundit", url: "https://bundit.nintrea.website" },
@@ -13,10 +15,7 @@ export const defaultMeta = {
     generator: info.name,
     keywords: ["nintrea", "nintrea website", "nintrea shared", "nintrea elibary"],
     // referrer: "origin",
-    themeColor: [
-        { media: "(prefers-color-scheme: dark)", color: "#000000" },
-        { media: "(prefers-color-scheme: light)", color: "#ffffff" }
-    ],
+    themeColor: "#ffffff",
     colorScheme: "dark",
     viewport: {
         width: "device-width", initialScale: 1
@@ -54,4 +53,11 @@ export const defaultMeta = {
     //         "me": "1234567890"
     //     }
     // }
+};
+
+export const viewport = {
+    themeColor: [
+        { media: "(prefers-color-scheme: dark)", color: "#000000" },
+        { media: "(prefers-color-scheme: light)", color: "#ffffff" }
+    ],
 };
