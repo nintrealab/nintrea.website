@@ -25,7 +25,6 @@ export default function Home() {
                         "--quantity": "-7",
                         "--paused": "running"
                     }}/> */}
-
                     <CardSlider
                         className={'hidden xl:block'}
                         data={[

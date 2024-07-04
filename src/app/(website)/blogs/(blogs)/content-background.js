@@ -1,6 +1,6 @@
 export const ContentBackground = () => {
     return(
-        <div className="fixed inset-0 w-full h-screen overflow-hidden left-1/5">
+        <div className="fixed inset-0 w-full h-screen overflow-hidden pointer-events-none left-1/5">
             <svg width="4096" height="2031" viewBox="0 0 4096 2031" className="bottom-0 w-full text-primary opacity-40" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                 <g clipPath="url(#clip0_103_10)">
                     {/* <rect width="4096" height="2031" fill="white"/> */}

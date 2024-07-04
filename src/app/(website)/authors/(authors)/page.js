@@ -1,28 +1,26 @@
 import { Container } from "@/components/container";
 import { Header } from "@/components/header";
-import { Hero } from "../(blogs)/hero";
-import { ContentBackground } from "../(blogs)/content-background";
-import { PostHeader } from "./post-header";
+import { Hero } from "./hero";
 
 import { defaultMeta  } from "@/data/meta";
+import { ListCards } from "./list-card";
 import { Footer } from "@/components/footer";
 export const viewport = defaultMeta
 
-export const Detail = () => {
+
+export default function Authors() {
+
     return (
         <>
-            <ContentBackground/>
+            {/* <ContentBackground/> */}
             <Header/>
 
             <Hero/>
 
             <Container>
-                <PostHeader/>
+                <ListCards/>
                 <Footer/>
             </Container>
         </>
     );
 }
-
-
-export default Detail;
