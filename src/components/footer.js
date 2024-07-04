@@ -2,20 +2,17 @@
 import React from "react";
 import { Logo } from "./logo";
 import { GitHubLogoIcon, InstagramLogoIcon, LinkedInLogoIcon, TwitterLogoIcon } from "@radix-ui/react-icons";
+// import { useRouter } from "next/navigation";
 import Link from "next/link";
-import { Button } from "./button";
-import { useRouter } from "next/navigation";
 
-
-// import Logo from "../assets/logo.png";
 
 export const Footer = () => {
 
-    const route = useRouter()
+    // const route = useRouter()
 
-    const useGoto = () => {
-        route.push('/')
-    }
+    // const useGoto = () => {
+    //     route.push('/')
+    // }
 
     return (
         <>
@@ -51,4 +48,3 @@ export const Footer = () => {
         </>
     );
 }
-// export {Footer};
