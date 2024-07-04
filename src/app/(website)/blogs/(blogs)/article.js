@@ -62,10 +62,10 @@ export const Article = ({ data }) => {
                     <p className="mt-2 mb-3 line-clamp-3">
                         {data?.description}
                     </p>
-                    <Link className="flex items-center text-sm font-medium text-sky-500" href="/">
+                    <Link className="flex items-center text-sm font-medium text-sky-500" href="/blogs/post-header">
                         <span className="absolute -inset-y-2.5 -inset-x-4 md:-inset-y-4 md:-inset-x-6 sm:rounded-2xl"></span>
                         <span className="relative text-xs sm:text-sm">
-                            Read more<span className="sr-only">{data?.title}</span>
+                            Read more<span className="sr-only" href="/">{data?.title}</span>
                         </span>
                         <svg className="relative mt-px overflow-visible ml-2.5 text-sky-300 dark:text-sky-700" width="3" height="6" viewBox="0 0 3 6" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                             <path d="M0 0L3 3L0 6"></path>
