@@ -1,10 +1,11 @@
 
 import { Container } from "@/components/container";
-import { Header } from "../../../components/header";
-import { Footer } from "../../../components/Footer";
+import { Header } from "@/components/header";
+import { Footer } from "@/components/footer";
 import { Hero } from "./hero";
 import { CardSlider } from "@/components/card-slider";
 import { defaultMeta  } from "@/data/meta";
+import { Author } from "@/components/author";
 export const viewport = defaultMeta
 
 export default function Home() {
@@ -13,8 +14,8 @@ export default function Home() {
         <>
             <Header/>
             <Hero/>
-
             <Container>
+            <Author/>
                 <div className="flex flex-col items-center justify-center gap-4 animate-fade-in">
                     {/* <ImageSlider data={data} reverse={'true'} style={{
                         "--width": "200px",
