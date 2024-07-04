@@ -1,16 +1,14 @@
 import { Container } from "@/components/container";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/Footer";
-// import { PostHeader } from "@/components/post-header";
-import { ListArticles } from "./list-articles";
 import { Hero } from "./hero";
-import { ContentBackground } from "./content-background";
+import { ContentBackground } from "../../blogs/(blogs)/content-background";
+
 import { defaultMeta  } from "@/data/meta";
 export const viewport = defaultMeta
 
 
-export default function Blogs() {
-
+export const Detail = () => {
     return (
         <>
             <ContentBackground/>
@@ -19,11 +17,12 @@ export default function Blogs() {
             <Hero/>
 
             <Container>
-                {/* <Footer/> */}
-
-                <ListArticles/>
+                <h1>Tags Detail</h1>
                 <Footer/>
             </Container>
         </>
     );
 }
+
+
+export default Detail;

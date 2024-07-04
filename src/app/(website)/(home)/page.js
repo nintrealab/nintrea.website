@@ -1,24 +1,11 @@
 
 import { Container } from "@/components/container";
 import { Header } from "../../../components/header";
-import { defaultMeta } from "@/data/meta";
 import { Footer } from "../../../components/Footer";
-
-export const metadata = defaultMeta;
-import { ImageSlider } from "@/components/image-slider";
 import { Hero } from "./hero";
-import Slide1 from "@/assets/images/slides/slider2_1.png";
-import Slide2 from "@/assets/images/slides/slider2_2.png";
-import Slide3 from "@/assets/images/slides/slider2_3.png";
-import Slide4 from "@/assets/images/slides/slider2_4.png";
-import Slide5 from "@/assets/images/slides/slider2_5.png";
-import Slide6 from "@/assets/images/slides/slider2_6.png";
-import Slide7 from "@/assets/images/slides/slider2_7.png";
-import Slide8 from "@/assets/images/slides/slider2_8.png";
-import Slide9 from "@/assets/images/slides/slider2_9.png";
 import { CardSlider } from "@/components/card-slider";
-import Image from "next/image";
-import Link from "next/link";
+import { defaultMeta  } from "@/data/meta";
+export const viewport = defaultMeta
 
 export default function Home() {
 
