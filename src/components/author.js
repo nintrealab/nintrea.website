@@ -11,11 +11,11 @@ export const Author =()=>{
                     src={Profle.src}
                     width={500}
                     height={500}
-                    alt="Picture of the author" className="rounded-full w-10 h-10 object-cover"
+                    alt="Picture of the author" className="object-cover w-10 h-10 rounded-full"
                 />
                 <div className="flex flex-col">
-                    <h4 className="text-xs font-bold text-gray-600 mx-3 " >@CHHEM Sithuch </h4>
-                    <Link href="#" className="text-primary text-xs mx-3 hover:underline ">@CHHEM Sithuch</Link>
+                    <h4 className="mx-3 text-xs font-bold text-gray-600 " >@CHHEM Sithuch </h4>
+                    <Link href="#" className="mx-3 text-xs text-primary hover:underline ">@CHHEM Sithuch</Link>
                 </div>
             </div>
         </Container>
