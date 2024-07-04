@@ -5,7 +5,7 @@ import { ContentBackground } from "../(blogs)/content-background";
 import { PostHeader } from "./post-header";
 
 import { defaultMeta  } from "@/data/meta";
-import { Footer } from "@/components/_footer";
+import { Footer } from "@/components/footer";
 export const viewport = defaultMeta
 
 export const Detail = () => {

@@ -4,7 +4,7 @@ import { Hero } from "./hero";
 
 import { defaultMeta  } from "@/data/meta";
 import { ListCards } from "./list-card";
-import { Footer } from "@/components/_footer";
+import { Footer } from "@/components/footer";
 export const viewport = defaultMeta
 
 

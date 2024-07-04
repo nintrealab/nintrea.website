@@ -4,7 +4,7 @@ import { Hero } from "./hero";
 import { ContentBackground } from "@/app/(website)/blogs/(blogs)/content-background";
 
 import { defaultMeta  } from "@/data/meta";
-import { Footer } from "@/components/_footer";
+import { Footer } from "@/components/footer";
 export const viewport = defaultMeta
 
 
