@@ -1,7 +1,5 @@
 
 import { Container } from "@/components/container";
-export const metadata = defaultMeta;
-import { ImageSlider } from "@/components/image-slider";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { Hero } from "./hero";

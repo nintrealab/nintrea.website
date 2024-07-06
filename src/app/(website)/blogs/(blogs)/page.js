@@ -1,11 +1,10 @@
 import { Container } from "@/components/container";
 import { Header } from "@/components/header";
-// import { PostHeader } from "@/components/post-header";
+import { Footer } from "@/components/footer";
 import { ListArticles } from "./list-articles";
 import { Hero } from "./hero";
 import { ContentBackground } from "./content-background";
 import { defaultMeta  } from "@/data/meta";
-import { Footer } from "@/components/footer";
 export const viewport = defaultMeta
 
 
