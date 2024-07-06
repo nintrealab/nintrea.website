@@ -20,23 +20,18 @@ export const ListArticles = () => {
     });
 
     return (
-        <div className="w-full pt-10">
-            <div className="relative sm:pb-12 sm:ml-[calc(2rem+1px)] md:ml-[calc(3.5rem+1px)] lg:ml-[max(calc(14.5rem+1px),calc(100%-65rem))]">
-                <div className="hidden absolute top-0 bottom-0 right-full mr-7 md:mr-[3.25rem] w-px bg-slate-200 dark:bg-slate-800 sm:block"> </div>
-                <div className="space-y-16">
-                    {
-                        isLoading
-                            ? [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map( (_, key)=> {
-                                return (
-                                    <LoadingArticle key={key}/>
-                                )
-                            })
-                            : Array.from(posts).map( (post, key)=> {
-                                return <Article key={key} data={post}/>;
-                            })
-                    }
-                </div>
-            </div>
+        <div className="grid max-w-5xl grid-cols-3 gap-2 mx-auto">
+            {
+                isLoading
+                ? [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map( (_, key)=> {
+                    return (
+                        <LoadingArticle key={key}/>
+                    )
+                })
+                : Array.from(posts).map( (post, key)=> {
+                    return <Article key={key} data={post}/>;
+                })
+            }
         </div>
     );
 }

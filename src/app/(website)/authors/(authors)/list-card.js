@@ -19,7 +19,7 @@ export const ListCards = () => {
     });
 
     return(
-        <ul role="list" className="grid grid-cols-1 gap-6 lg:grid-cols-2">
+        <div role="list" className="grid max-w-6xl grid-cols-1 gap-6 mx-auto lg:grid-cols-4">
             {
                 isLoading
                 ? [1,2,3,4,5,6,7,8,9].map((_,key)=> <LoadingCard key={key}/>)
@@ -27,6 +27,6 @@ export const ListCards = () => {
                     return <Card key={index} data={user}/>
                 })
             }
-        </ul>
+        </div>
     )
 }
