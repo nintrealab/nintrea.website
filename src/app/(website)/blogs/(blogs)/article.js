@@ -99,7 +99,7 @@ export const LoadingArticle = ({ data }) => {
 
 export const Article = ({ data }) => {
     return (
-        <article className="flex flex-col col-span-1 gap-0 transition-all divide-gray-200 rounded-xl text-centerdivide-y hover:bg-gray-50 drop-shadow-2xl">
+        <article className="flex flex-col col-span-1 gap-0 transition-all divide-gray-200 rounded-xl text-centerdivide-y hover:bg-background drop-shadow-2xl">
             <div className="w-full p-5 pb-2.5 pt-7">
                 <Image
                     width={250}
@@ -118,7 +118,7 @@ export const Article = ({ data }) => {
                     {data?.description}
                 </p>
                 <div className="w-full text-right">
-                    <Link className="flex items-center text-sm font-medium text-sky-500 hover:underline" href="/">
+                    <Link className="flex items-center text-sm font-medium from-left text-sky-500" href="/">
                         <span className="relative text-xs sm:text-sm">
                             Read more<span className="sr-only">{data?.title}</span>
                         </span>
