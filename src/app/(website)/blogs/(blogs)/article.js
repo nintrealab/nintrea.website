@@ -98,6 +98,8 @@ export const LoadingArticle = ({ data }) => {
 }
 
 export const Article = ({ data }) => {
+    const stringDate = data?.meta?.createdAt
+    const date = parseISO(stringDate)
     return (
         <article className="flex flex-col col-span-1 gap-0 transition-all divide-gray-200 rounded-xl text-centerdivide-y hover:bg-background drop-shadow-2xl">
             <div className="w-full p-5 pb-2.5 pt-7">
@@ -111,18 +113,20 @@ export const Article = ({ data }) => {
                 />
             </div>
             <div className="flex flex-col items-start justify-start w-full p-5 py-2.5 pb-7">
+                <time dateTime={stringDate} className="text-xs text-foreground/90">{format(date, 'LLLL d, yyyy')}</time>
                 <h3 className="pt-5 text-base font-semibold tracking-tight line-clamp-2 sm:line-clamp-1 text-slate-900 dark:text-slate-200 lg:pt-0">
                     {data?.title}
                 </h3>
-                <p className="mt-2 mb-3 line-clamp-3">
+
+                <p className="mt-2 mb-3 line-clamp-2">
                     {data?.description}
                 </p>
-                <div className="w-full text-right">
-                    <Link className="flex items-center text-sm font-medium from-left text-sky-500" href="/">
+                <div className="flex items-center justify-between w-full text-right">
+                    <Link className="flex items-center text-sm font-medium from-left text-primary" href="/blogs/title-blogs">
                         <span className="relative text-xs sm:text-sm">
                             Read more<span className="sr-only">{data?.title}</span>
                         </span>
-                        <svg className="relative mt-px overflow-visible ml-2.5 text-sky-300 dark:text-sky-700" width="3" height="6" viewBox="0 0 3 6" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <svg className="relative mt-px overflow-visible ml-2.5 text-primary/90 dark:text-primary" width="3" height="6" viewBox="0 0 3 6" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                             <path d="M0 0L3 3L0 6"></path>
                         </svg>
                     </Link>
