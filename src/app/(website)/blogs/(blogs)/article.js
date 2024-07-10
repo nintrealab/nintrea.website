@@ -53,9 +53,9 @@ export const Articles = ({ data }) => {
                     />
                 </div>
                 <div className="relative w-full">
-                    <h3 className="pt-5 text-base font-semibold tracking-tight line-clamp-2 sm:line-clamp-1 text-slate-900 dark:text-slate-200 lg:pt-0">
+                    <h2 className="pt-5 text-base font-semibold tracking-tight line-clamp-2 sm:line-clamp-1 text-slate-900 dark:text-slate-200 lg:pt-0">
                         {data?.title}
-                    </h3>
+                    </h2>
                     <p className="mt-2 mb-3 line-clamp-3">
                         {data?.description}
                     </p>
@@ -115,9 +115,9 @@ export const Article = ({ data }) => {
             </div>
             <div className="flex flex-col items-start justify-start w-full p-5 py-2.5 pb-7">
                 <time dateTime={stringDate} className="text-xs text-foreground/90">{format(date, 'LLLL d, yyyy')}</time>
-                <h3 className="pt-5 text-base font-semibold tracking-tight line-clamp-2 sm:line-clamp-1 text-slate-900 dark:text-slate-200 lg:pt-0">
+                <h2 className="pt-5 text-base font-semibold tracking-tight line-clamp-2 sm:line-clamp-1 text-slate-900 dark:text-slate-200 lg:pt-0">
                     {data?.title}
-                </h3>
+                </h2>
 
                 <p className="mt-2 mb-3 line-clamp-2">
                     {data?.description}

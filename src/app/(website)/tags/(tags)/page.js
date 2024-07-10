@@ -4,8 +4,8 @@ import { Footer } from "@/components/footer";
 import { Hero } from "./hero";
 import { ContentBackground } from "@/app/(website)/blogs/(blogs)/content-background";
 
-import { defaultMeta  } from "@/data/meta";
-export const viewport = defaultMeta
+import { viewport as dataViewport } from "@/data/meta";
+export const viewport = dataViewport
 
 
 export default function Blogs() {

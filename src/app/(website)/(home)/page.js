@@ -3,12 +3,12 @@ import { Container } from "@/components/container";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { Hero } from "./hero";
-import { defaultMeta  } from "@/data/meta";
 import { ListArticles } from "../blogs/(blogs)/list-articles";
 import { ImageSlider } from "@/components/image-slider";
 import { Button } from "@/components/button";
 import { CardEffect } from "@/components/card-effect";
-export const viewport = defaultMeta
+import { viewport as dataViewport } from "@/data/meta";
+export const viewport = dataViewport
 
 export default function Home() {
 
@@ -37,8 +37,8 @@ export default function Home() {
                 </div>
 
                 <section className="relative w-full h-screen sm:h-[calc(100vh_-10rem)] pt-10 overflow-hidden">
-                    <div className="absolute bottom-0 z-50 flex items-end justify-center w-full from-background bg-gradient-to-t h-52">
-                        <Button variant="outline" className="rounded-full"> Read more </Button>
+                    <div className="absolute bottom-0 z-50 flex items-end justify-center w-full pointer-events-none from-background bg-gradient-to-t h-52">
+                        <Button variant="outline" className="rounded-full pointer-events-auto"> Read more </Button>
                     </div>
                     <ListArticles/>
                 </section>

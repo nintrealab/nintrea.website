@@ -5,11 +5,10 @@ import { Header } from "@/components/header";
 import { Hero } from "../(blogs)/hero";
 import { ContentBackground } from "../(blogs)/content-background";
 import { PostHeader } from "./post-header";
-
-import { defaultMeta  } from "@/data/meta";
 import { Footer } from "@/components/footer";
 import { useParams } from "next/navigation";
-export const viewport = defaultMeta
+import { viewport as dataViewport } from "@/data/meta";
+export const viewport = dataViewport
 
 export const Detail = () => {
     const { detail } = useParams()

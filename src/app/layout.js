@@ -2,6 +2,7 @@ import "@/styles/globals.css";
 import { ThemeProvider } from "@/components/theme-provider"
 import { Poppins } from "next/font/google"
 import { cn } from "@/lib/utils";
+import { defaultMeta } from "@/data/meta";
 
 const fontSans = Poppins({
     subsets: ["latin"],
@@ -10,6 +11,7 @@ const fontSans = Poppins({
     variable: "--font-sans",
 })
 
+export const metadata = defaultMeta
 
 export default function RootLayout({ children }) {
     return (

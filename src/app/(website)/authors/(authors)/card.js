@@ -17,7 +17,7 @@ export const Card = ({ data }) => {
                 />
             </div>
             <div className="flex flex-col items-start justify-start w-full p-5 py-2.5">
-                <h3 className="text-lg font-medium leading-8 text-gray-900">{data?.firstName} {data?.lastName}</h3>
+                <h2 className="text-lg font-medium leading-8 text-gray-900">{data?.firstName} {data?.lastName}</h2>
                 <dl className="flex flex-col justify-between mt-1 text-card-foreground/70">
                     <dt className="sr-only">Name</dt>
                     <dd className="leading-7">{data?.company?.title}</dd>
