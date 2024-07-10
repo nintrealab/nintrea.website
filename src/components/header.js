@@ -12,7 +12,7 @@ import { cn } from "@/lib/utils";
 export const Header = () => {
     const path = usePathname();
     return (
-        <div className="sticky top-0 z-20 w-full py-3 mx-auto transition-all border-b border-foreground/10 scroll-smooth backdrop-blur-sm bg-background/70">
+        <div className="sticky top-0 z-20 w-full p-3 mx-auto transition-all border-b border-foreground/10 scroll-smooth backdrop-blur-sm bg-background/70">
             <Container className={'flex w-full items-center justify-between'}>
                 <div>
                     <Link href="/" className="pb-2 cursor-pointer" aria-label={defaultMeta.title + ` Logo`}>

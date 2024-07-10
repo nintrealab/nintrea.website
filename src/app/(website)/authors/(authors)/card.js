@@ -11,7 +11,7 @@ export const Card = ({ data }) => {
                     width={250}
                     height={250}
                     className="flex-shrink-0 object-cover w-full aspect-[5/3] mx-auto rounded-lg"
-                    src={`https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80`}
+                    src={`https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=512&h=512&q=80`}
                     // src={data.image}
                     alt={data?.firstName +` `+ data?.lastName}
                 />

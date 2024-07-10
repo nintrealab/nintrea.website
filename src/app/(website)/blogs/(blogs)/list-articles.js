@@ -1,6 +1,7 @@
 "use client";
 import { useMemo, useState } from 'react';
 import { Article, LoadingArticle } from './article';
+import { CardEffect } from '@/components/card-effect';
 
 export const ListArticles = () => {
     const [data, setData] = useState({});
@@ -20,16 +21,22 @@ export const ListArticles = () => {
     });
 
     return (
-        <div className="grid max-w-5xl gap-2 mx-auto sm:grid-cols-2 md:grid-cols-3">
+        <div className="grid max-w-5xl gap-4 mx-auto sm:grid-cols-2 md:grid-cols-3">
             {
                 isLoading
                 ? [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map( (_, key)=> {
                     return (
-                        <LoadingArticle key={key}/>
+                        <CardEffect key={key}>
+                            <LoadingArticle/>
+                        </CardEffect>
                     )
                 })
                 : Array.from(posts).map( (post, key)=> {
-                    return <Article key={key} data={post}/>;
+                    return (
+                        <CardEffect key={key}>
+                            <Article data={post}/>
+                        </CardEffect>
+                    )
                 })
             }
         </div>

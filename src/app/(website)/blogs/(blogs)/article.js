@@ -85,10 +85,11 @@ export const LoadingArticle = ({ data }) => {
     return (
         <article className="flex flex-col col-span-1 gap-0 pb-5 divide-gray-200 rounded-xl text-centerdivide-y">
             <div className="w-full p-5 pb-2.5">
-                <Skeleton className="w-full aspect-[5/3] rounded-xl shrink-0" />
+                <Skeleton className="w-full aspect-[5/3] rounded-xl shrink-0 mt-2" />
             </div>
             <div className="flex flex-col gap-3 items-start justify-start w-full p-5 py-2.5">
-                <Skeleton className="w-[95%] h-4 rounded-xl shrink-0" />
+                <Skeleton className="w-16 h-2 mt-1 rounded-xl shrink-0" />
+                <Skeleton className="w-[95%] h-4 rounded-xl shrink-0 mt-2" />
                 <Skeleton className="w-full h-3 rounded-xl shrink-0" />
                 <Skeleton className="w-[90%] h-3 rounded-xl shrink-0" />
                 <Skeleton className="w-20 h-3 rounded-xl shrink-0" />
@@ -107,7 +108,7 @@ export const Article = ({ data }) => {
                     width={250}
                     height={250}
                     className="flex-shrink-0 object-cover w-full aspect-[5/3] mx-auto rounded-lg"
-                    src={`https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80`}
+                    src={`https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=512&h=512&q=80`}
                     // src={data.image}
                     alt={data?.firstName +` `+ data?.lastName}
                 />
