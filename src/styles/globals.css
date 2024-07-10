@@ -38,10 +38,10 @@
     }
 
     .dark {
-        --background: 222.2 84% 4.9%;
+        --background: 216 28% 7%;
         --foreground: 210 40% 98%;
 
-        --card: 222.2 84% 4.9%;
+        --card: 212 12% 21%;
         --card-foreground: 210 40% 98%;
 
         --popover: 222.2 84% 4.9%;
@@ -138,7 +138,7 @@
 
 .from-left {
     text-decoration: none;
-    @apply leading-10 relative max-w-fit;
+    @apply relative leading-10 max-w-fit;
 }
 
 .from-left:after {

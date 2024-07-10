@@ -6,6 +6,9 @@ import { Hero } from "./hero";
 import { CardSlider } from "@/components/card-slider";
 import { defaultMeta  } from "@/data/meta";
 import { Author } from "@/components/author";
+import { ListArticles } from "../blogs/(blogs)/list-articles";
+import { ImageSlider } from "@/components/image-slider";
+import { Button } from "@/components/button";
 export const viewport = defaultMeta
 
 export default function Home() {
@@ -15,15 +18,24 @@ export default function Home() {
             <Header/>
             <Hero/>
             <Container>
-            <Author/>
-                <div className="flex flex-col items-center justify-center gap-4 animate-fade-in">
-                    {/* <ImageSlider data={data} reverse={'true'} style={{
-                        "--width": "200px",
-                        "--height": "200px",
-                        "--quantity": "-7",
-                        "--paused": "running"
-                    }}/> */}
-                    <CardSlider
+            {/* <Author/> */}
+                <div className="flex flex-col items-center justify-center max-w-2xl gap-4 mx-auto animate-fade-in">
+                    <ImageSlider data={[
+                            { src: "https://github.com/pphatdev.png",},
+                            { src: "https://github.com/SVA-bundittt.png", },
+                            { src: "https://github.com/sithuch.png", },
+                            { src: "https://github.com/vyniivaa-dev.png", },
+                            { src: "https://github.com/pphatdev.png",},
+                            { src: "https://github.com/SVA-bundittt.png", },
+                            { src: "https://github.com/sithuch.png", },
+                            { src: "https://github.com/vyniivaa-dev.png", },
+                        ]} reverse={'false'} style={{
+                        "--width": "50px",
+                        "--height": "50px",
+                        "--quantity": "-8",
+                        "--paused": "paused"
+                    }}/>
+                    {/* <CardSlider
                         className={'hidden xl:block'}
                         data={[
                             {
@@ -59,17 +71,17 @@ export default function Home() {
                             "--paused": "paused",
                             "--speed": "20s"
                         }}
-                    />
+                    /> */}
 
                 </div>
-                <div className="w-full pt-10">
 
-                    <div className="relative sm:pb-12 sm:ml-[calc(2rem+1px)] md:ml-[calc(3.5rem+1px)] lg:ml-[max(calc(14.5rem+1px),calc(100%-65rem))]">
-                        <div className="hidden absolute top-3 bottom-0 right-full mr-7 md:mr-[3.25rem] w-px bg-slate-200 dark:bg-slate-800 sm:block"> </div>
-                        <div className="space-y-16">
-                        </div>
+                <section className="relative w-full h-[calc(100vh_-10rem)] pt-10 overflow-hidden">
+                    <div className="absolute bottom-0 z-50 flex items-end justify-center w-full from-background bg-gradient-to-t h-52">
+                        <Button variant="outline" className="rounded-full"> Read more </Button>
                     </div>
-                </div>
+                    <ListArticles/>
+                </section>
+
                 <Footer/>
             </Container>
         </>

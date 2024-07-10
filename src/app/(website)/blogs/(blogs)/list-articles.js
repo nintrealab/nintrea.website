@@ -20,7 +20,7 @@ export const ListArticles = () => {
     });
 
     return (
-        <div className="grid max-w-5xl grid-cols-3 gap-2 mx-auto">
+        <div className="grid max-w-5xl gap-2 mx-auto sm:grid-cols-2 md:grid-cols-3">
             {
                 isLoading
                 ? [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map( (_, key)=> {

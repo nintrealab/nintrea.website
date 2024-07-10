@@ -101,7 +101,7 @@ export const Article = ({ data }) => {
     const stringDate = data?.meta?.createdAt
     const date = parseISO(stringDate)
     return (
-        <article className="flex flex-col col-span-1 gap-0 transition-all divide-gray-200 rounded-xl text-centerdivide-y hover:bg-background drop-shadow-2xl">
+        <article className="flex flex-col col-span-1 gap-0 transition-all divide-gray-200 hover:ring-1 rounded-xl text-centerdivide-y hover:bg-card/50 ring-card drop-shadow-2xl">
             <div className="w-full p-5 pb-2.5 pt-7">
                 <Image
                     width={250}
