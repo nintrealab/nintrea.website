@@ -28,11 +28,6 @@ const nextConfig = {
             },
         ],
     },
-    output: "export",
-    basePath: "/nintrea.website",
-    images: {
-        unoptimized: true,
-    },
 };
 
 export default nextConfig;
