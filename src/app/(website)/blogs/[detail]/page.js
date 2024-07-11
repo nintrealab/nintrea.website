@@ -1,15 +1,17 @@
+"use client";
+
 import { Container } from "@/components/container";
 import { Header } from "@/components/header";
-import { ListArticles } from "../(blogs)/list-articles";
 import { Hero } from "../(blogs)/hero";
 import { ContentBackground } from "../(blogs)/content-background";
 import { PostHeader } from "./post-header";
-
-import { defaultMeta  } from "@/data/meta";
 import { Footer } from "@/components/footer";
-export const viewport = defaultMeta
+import { useParams } from "next/navigation";
+import { viewport as dataViewport } from "@/data/meta";
+export const viewport = dataViewport
 
 export const Detail = () => {
+    const { detail } = useParams()
     return (
         <>
             <ContentBackground/>

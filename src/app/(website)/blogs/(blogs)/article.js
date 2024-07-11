@@ -53,9 +53,9 @@ export const Articles = ({ data }) => {
                     />
                 </div>
                 <div className="relative w-full">
-                    <h3 className="pt-5 text-base font-semibold tracking-tight line-clamp-2 sm:line-clamp-1 text-slate-900 dark:text-slate-200 lg:pt-0">
+                    <h2 className="pt-5 text-base font-semibold tracking-tight line-clamp-2 sm:line-clamp-1 text-slate-900 dark:text-slate-200 lg:pt-0">
                         {data?.title}
-                    </h3>
+                    </h2>
                     <p className="mt-2 mb-3 line-clamp-3">
                         {data?.description}
                     </p>
@@ -85,10 +85,11 @@ export const LoadingArticle = ({ data }) => {
     return (
         <article className="flex flex-col col-span-1 gap-0 pb-5 divide-gray-200 rounded-xl text-centerdivide-y">
             <div className="w-full p-5 pb-2.5">
-                <Skeleton className="w-full aspect-[5/3] rounded-xl shrink-0" />
+                <Skeleton className="w-full aspect-[5/3] rounded-xl shrink-0 mt-2" />
             </div>
             <div className="flex flex-col gap-3 items-start justify-start w-full p-5 py-2.5">
-                <Skeleton className="w-[95%] h-4 rounded-xl shrink-0" />
+                <Skeleton className="w-16 h-2 mt-1 rounded-xl shrink-0" />
+                <Skeleton className="w-[95%] h-4 rounded-xl shrink-0 mt-2" />
                 <Skeleton className="w-full h-3 rounded-xl shrink-0" />
                 <Skeleton className="w-[90%] h-3 rounded-xl shrink-0" />
                 <Skeleton className="w-20 h-3 rounded-xl shrink-0" />
@@ -101,22 +102,22 @@ export const Article = ({ data }) => {
     const stringDate = data?.meta?.createdAt
     const date = parseISO(stringDate)
     return (
-        <article className="flex flex-col col-span-1 gap-0 transition-all divide-gray-200 rounded-xl text-centerdivide-y hover:bg-background drop-shadow-2xl">
+        <article className="flex flex-col col-span-1 gap-0 transition-all divide-gray-200 hover:ring-1 rounded-xl text-centerdivide-y hover:bg-card/50 ring-card drop-shadow-2xl">
             <div className="w-full p-5 pb-2.5 pt-7">
                 <Image
                     width={250}
                     height={250}
                     className="flex-shrink-0 object-cover w-full aspect-[5/3] mx-auto rounded-lg"
-                    src={`https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80`}
+                    src={`https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=300&h=300&q=80`}
                     // src={data.image}
                     alt={data?.firstName +` `+ data?.lastName}
                 />
             </div>
             <div className="flex flex-col items-start justify-start w-full p-5 py-2.5 pb-7">
                 <time dateTime={stringDate} className="text-xs text-foreground/90">{format(date, 'LLLL d, yyyy')}</time>
-                <h3 className="pt-5 text-base font-semibold tracking-tight line-clamp-2 sm:line-clamp-1 text-slate-900 dark:text-slate-200 lg:pt-0">
+                <h2 className="pt-5 text-base font-semibold tracking-tight line-clamp-2 sm:line-clamp-1 text-slate-900 dark:text-slate-200 lg:pt-0">
                     {data?.title}
-                </h3>
+                </h2>
 
                 <p className="mt-2 mb-3 line-clamp-2">
                     {data?.description}

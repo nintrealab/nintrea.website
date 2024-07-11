@@ -14,12 +14,7 @@ export const defaultMeta = {
     ],
     generator: info.name,
     keywords: ["nintrea", "nintrea website", "nintrea shared", "nintrea elibary"],
-    // referrer: "origin",
-    themeColor: "#ffffff",
-    colorScheme: "dark",
-    viewport: {
-        width: "device-width", initialScale: 1
-    },
+    referrer: "origin",
     creator: "Nintrea Team",
     publisher: "Vercel, Netlify",
     // robots: {
@@ -60,4 +55,7 @@ export const viewport = {
         { media: "(prefers-color-scheme: dark)", color: "#000000" },
         { media: "(prefers-color-scheme: light)", color: "#ffffff" }
     ],
+    viewport: {
+        width: "device-width", initialScale: 1
+    },
 };

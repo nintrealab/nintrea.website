@@ -7,7 +7,15 @@ import { CardSlider } from "@/components/card-slider";
 import { defaultMeta  } from "@/data/meta";
 import CommandPalette from "@/components/command-palette";
 // import { Author } from "@/components/author";
-export const viewport = defaultMeta
+import { ListArticles } from "../blogs/(blogs)/list-articles";
+import { ImageSlider } from "@/components/image-slider";
+import { Button } from "@/components/button";
+import { CardEffect } from "@/components/card-effect";
+import { viewport as dataViewport } from "@/data/meta";
+import { HeroHighlightBoard } from "./hero-highlight-board";
+import { Meteors } from "@/components/meteors";
+import { MeteorsCard } from "./meteor-card";
+export const viewport = dataViewport
 
 export default function Home() {
 
@@ -16,62 +24,68 @@ export default function Home() {
             <Header/>
             <Hero/>
             <Container>
-            <CommandPalette/>
-            {/* <Author/> */}
-                <div className="flex flex-col items-center justify-center gap-4 animate-fade-in">
-                    {/* <ImageSlider data={data} reverse={'true'} style={{
-                        "--width": "200px",
-                        "--height": "200px",
-                        "--quantity": "-7",
-                        "--paused": "running"
-                    }}/> */}
-                    <CardSlider
-                        className={'hidden xl:block'}
-                        data={[
-                            {
-                                src: "https://github.com/pphatdev.png",
-                                title: "LEAT Sophat",
-                                joined: "January 23 2020",
-                                description: "Thoughts from a wandering mind. I am the senior front-end developer of @turbotechlabs , and an UI/UX designer."
-                            },
-                            {
-                                src: "https://github.com/SVA-bundittt.png",
-                                title: "HOL Bundit",
-                                joined: "January 23 2020",
-                                description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo impedit sapiente recusandae iusto officiis dolor? Laborum quibusdam quam, quidem vel assumenda repellat inventore sint nesciunt, ullam asperiores magnam placeat eveniet. Aliquam voluptatibus assumenda distinctio veniam quam tempora modi aperiam nemo voluptate reprehenderit quidem, nisi vero est."
-                            },
-                            {
-                                src: "https://github.com/sithuch.png",
-                                title: "CHHEM Sithuch",
-                                joined: "Jun 24 2024",
-                                description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo impedit sapiente recusandae iusto officiis dolor? Laborum quibusdam quam, quidem vel assumenda repellat inventore sint nesciunt, ullam asperiores magnam placeat eveniet. Aliquam voluptatibus assumenda distinctio veniam quam tempora modi aperiam nemo voluptate reprehenderit quidem, nisi vero est."
-                            },
-                            {
-                                src: "https://github.com/vyniivaa-dev.png",
-                                title: "MEAN Navy",
-                                joined: "Jun 24 2024",
-                                description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo impedit sapiente recusandae iusto officiis dolor? Laborum quibusdam quam, quidem vel assumenda repellat inventore sint nesciunt, ullam asperiores magnam placeat eveniet. Aliquam voluptatibus assumenda distinctio veniam quam tempora modi aperiam nemo voluptate reprehenderit quidem, nisi vero est."
-                            },
-                        ]}
-                        reverse={'false'}
-                        style={{
-                            "--width": "390px",
-                            "--height": "200px",
-                            "--quantity": "-4",
-                            "--paused": "paused",
-                            "--speed": "20s"
-                        }}
-                    />
 
-                </div>
-                <div className="w-full pt-10">
+                {/* <div className="flex flex-col items-center justify-center max-w-2xl gap-4 mx-auto animate-fade-in">
+                    <ImageSlider data={[
+                            { src: "https://github.com/pphatdev.png",},
+                            { src: "https://github.com/SVA-bundittt.png", },
+                            { src: "https://github.com/sithuch.png", },
+                            { src: "https://github.com/vyniivaa-dev.png", },
+                            { src: "https://github.com/pphatdev.png",},
+                            { src: "https://github.com/SVA-bundittt.png", },
+                            { src: "https://github.com/sithuch.png", },
+                            { src: "https://github.com/vyniivaa-dev.png", },
+                        ]} reverse={'false'} style={{
+                        "--width": "50px",
+                        "--height": "50px",
+                        "--quantity": "-6",
+                        "--paused": "paused"
+                    }}/>
+                </div> */}
 
-                    <div className="relative sm:pb-12 sm:ml-[calc(2rem+1px)] md:ml-[calc(3.5rem+1px)] lg:ml-[max(calc(14.5rem+1px),calc(100%-65rem))]">
-                        <div className="hidden absolute top-3 bottom-0 right-full mr-7 md:mr-[3.25rem] w-px bg-slate-200 dark:bg-slate-800 sm:block"> </div>
-                        <div className="space-y-16">
+
+                <section className="max-w-6xl mx-auto my-20 justify-evenly">
+                    {/* <CardEffect className={`bg-green-200 dark:bg-purple-950`}> */}
+                        <div className="grid items-center grid-cols-3 gap-3 h-96">
+                            <MeteorsCard/>
+                            <MeteorsCard/>
+                            <MeteorsCard/>
                         </div>
+                    {/* </CardEffect> */}
+                </section>
+
+
+                <section className="relative w-full h-screen sm:h-[calc(100vh_-10rem)] pt-10 overflow-hidden">
+
+                    <div className="absolute inset-0 top-1/2">
+                        <HeroHighlightBoard></HeroHighlightBoard>
                     </div>
-                </div>
+                    <div className="absolute bottom-0 z-10 flex items-end justify-center w-full pointer-events-none pb-7 from-background bg-gradient-to-t h-52">
+                        {/* <Button variant="outline" className="rounded-full pointer-events-auto"> Read more </Button> */}
+
+                        <Button className="shadow-[0_4px_14px_0_rgb(0,118,255,39%)] pointer-events-auto relative hover:shadow-[0_6px_20px_rgba(0,118,255,23%)] px-8 py-2 bg-primary/90 rounded-full text-primary-foreground font-light transition duration-200 ease-linear">
+                            <span className="leading-7 ">{`Learn More`}</span>
+                            <span className="absolute -bottom-0 left-[1.125rem] h-px w-[calc(100%-2.25rem)] bg-gradient-to-r from-emerald-400/0 via-emerald-400/90 to-emerald-400/0 transition-opacity duration-500 group-hover:opacity-40"></span>
+                        </Button>
+                    </div>
+                    <ListArticles/>
+
+                </section>
+
+
+
+
+                <section className="relative w-full h-screen sm:h-[calc(100vh_-20rem)] pt-10 overflow-hidden">
+                    <CardEffect className={`bg-green-200 dark:bg-purple-950`}>
+
+                    </CardEffect>
+                </section>
+
+                <section className="relative w-full h-screen sm:h-[calc(100vh_-20rem)] pt-10 overflow-hidden">
+                    <HeroHighlightBoard/>
+                </section>
+
+
                 <Footer/>
             </Container>
         </>

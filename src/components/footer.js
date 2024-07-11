@@ -24,16 +24,16 @@ export const Footer = () => {
                         <InstagramLogoIcon className="size-6"/>
                     </Button> */}
 
-                    <Link href="/">
+                    <Link href="/" aria-label="Instagram">
                         <InstagramLogoIcon className="size-6"/>
                     </Link>
-                    <Link href="/">
+                    <Link href="/" aria-label="Twitter">
                         <TwitterLogoIcon className="size-6"/>
                     </Link>
-                    <Link href="/">
+                    <Link href="/" aria-label="LinkedIn">
                         <LinkedInLogoIcon className="size-6"/>
                     </Link>
-                    <Link href="https://github.com/nintrealab" target="blank">
+                    <Link href="https://github.com/nintrealab" target="blank" aria-label="github">
                         <GitHubLogoIcon className="size-6" />
                     </Link>
                 </div>

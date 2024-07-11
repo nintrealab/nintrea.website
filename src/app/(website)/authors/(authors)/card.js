@@ -11,13 +11,13 @@ export const Card = ({ data }) => {
                     width={250}
                     height={250}
                     className="flex-shrink-0 object-cover w-full aspect-[5/3] mx-auto rounded-lg"
-                    src={`https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80`}
+                    src={`https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=300&h=300&q=80`}
                     // src={data.image}
                     alt={data?.firstName +` `+ data?.lastName}
                 />
             </div>
             <div className="flex flex-col items-start justify-start w-full p-5 py-2.5">
-                <h3 className="text-lg font-medium leading-8 text-gray-900">{data?.firstName} {data?.lastName}</h3>
+                <h2 className="text-lg font-medium leading-8 text-gray-900">{data?.firstName} {data?.lastName}</h2>
                 <dl className="flex flex-col justify-between mt-1 text-card-foreground/70">
                     <dt className="sr-only">Name</dt>
                     <dd className="leading-7">{data?.company?.title}</dd>
