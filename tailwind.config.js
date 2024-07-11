@@ -100,11 +100,9 @@ module.exports = {
             },
         },
     },
-<<<<<<< HEAD
-    plugins: [require("tailwindcss-animate"),require('@tailwindcss/forms')],
-=======
+    // plugins: [require("tailwindcss-animate"),require('@tailswindcss/forms')],
     plugins: [
-        require("tailwindcss-animate"),
+        require("tailwindcss-animate"),require('@tailswindcss/forms'),
         addVariablesForColors,
         function ({ matchUtilities, theme }) {
             matchUtilities(
@@ -131,5 +129,4 @@ function addVariablesForColors({ addBase, theme }) {
     addBase({
         ":root": newVars,
     });
->>>>>>> 8820c9ce22bc10f098f6801f2dd54e59e99b6f67
 }
