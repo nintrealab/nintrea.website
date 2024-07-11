@@ -39,7 +39,9 @@ export default function CommandPalette({ isOpen=false, setIsOpen = ()=>{} })
 
             <DialogBackdrop
                 transition
-                className="fixed inset-0 backdrop-blur-sm bg-gray-900 bg-opacity-10 transition-opacity data-[closed]:opacity-0 data-[enter]:duration-300 data-[leave]:duration-200 data-[enter]:ease-out data-[leave]:ease-in overflow-scroll"
+                className="fixed top-0 left-0 w-full h-full backdrop-blur-sm bg-gray-900 bg-opacity-10 transition-opacity 
+                        data-[closed]:opacity-0 data-[enter]:duration-300 data-[leave]:duration-200 data-[enter]:ease-out data-[leave]:ease-in 
+                        z-50 "
             />
             <div className="fixed inset-0 z-50 w-screen overflow-y-auto p-4 sm:p-6 md:p-20 md:pt-[20vh]">
             <DialogPanel
@@ -73,7 +75,7 @@ export default function CommandPalette({ isOpen=false, setIsOpen = ()=>{} })
                             <ComboboxOption
                                 key={person.id}
                                 value={person}
-                                className=" hover:duration-150 select-none px-4 py-2 data-[focus]:bg-gray-200 data-[focus]:text-white rounded-sm "
+                                className="hover:transition-all border border-solid scroll-smooth select-none px-4 py-3 data-[focus]:bg-gray-100 data-[focus]hover:text-sky-300 hover:text-sky-500"
                             >
                                 {person.name}
                             </ComboboxOption>
