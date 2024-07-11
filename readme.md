@@ -4,6 +4,12 @@ Compiled with various documents to support the study of students or those who li
 
 <br>
 
+<p align="center">
+  
+<img src="public/under-construction.gif" />
+
+</p>
+
 ## To Start Project ♻️
 
 ```sh
