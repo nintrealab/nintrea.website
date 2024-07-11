@@ -4,6 +4,7 @@ import { Logo } from "./logo";
 import { GitHubLogoIcon, InstagramLogoIcon, LinkedInLogoIcon, TwitterLogoIcon } from "@radix-ui/react-icons";
 // import { useRouter } from "next/navigation";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 
 export const Footer = () => {
@@ -42,9 +43,9 @@ export const Footer = () => {
                         <p>Copyright 2023 - Absolute Post. All rights reserved. No part of this website may be reproduced without permission.</p>
                         <p>Please review our Terms and Conditions. Please review our Privacy Policy.</p>
                     </div>
-                    <div className="flex"></div>   
+                    <div className="flex"></div>
                 </div>
-            </div> 
+            </div>
         </>
     );
 }
