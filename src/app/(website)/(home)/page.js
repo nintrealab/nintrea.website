@@ -46,7 +46,7 @@ export default function Home() {
 
 
                 <section className="relative w-full h-screen sm:h-[calc(100vh_-20rem)] pt-10 overflow-hidden">
-                    <CardEffect className={`bg-foreground/5`}>
+                    <CardEffect className={`bg-primary/10 dark:bg-purple-950`}>
                     </CardEffect>
                 </section>
 
