@@ -1,8 +1,14 @@
+"use client"
 import { Container } from "@/components/container";
 import { GridBackground } from "../../(home)/background";
 import { cn } from "@/lib/utils";
+import { Button } from "@/components/button";
+import { useState } from "react";
+import CommandPalette from "@/components/command-palette";
 
 export const Hero = () => {
+
+    const [isOpen, setIsOpen] = useState(false)
     return (
         <div className='w-full h-[35rem]'>
             <GridBackground/>
@@ -23,7 +29,8 @@ export const Hero = () => {
                 </p>
 
                 <div className="flex justify-center mt-6 space-x-6 text-sm sm:mt-10">
-                    <button type="button" className="items-center h-12 px-4 space-x-3 text-left bg-white rounded-lg shadow-sm sm:flex w-72 ring-1 ring-slate-900/10 hover:ring-slate-300 focus:outline-none focus:ring-2 focus:ring-sky-500 text-slate-400 dark:bg-slate-800 dark:ring-0 dark:text-slate-300 dark:highlight-white/5 dark:hover:bg-slate-700">
+                    <Button type="button" onClick={()=>setIsOpen(true)}
+                    className="items-center h-12 px-4 space-x-3 text-left bg-white rounded-lg shadow-sm sm:flex w-72 ring-1 ring-slate-900/10 hover:ring-slate-300 focus:outline-none focus:ring-2 focus:ring-sky-500 text-slate-400 dark:bg-slate-800 dark:ring-0 dark:text-slate-300 dark:highlight-white/5 dark:hover:bg-slate-700">
                         <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="flex-none text-slate-300 dark:text-slate-400" aria-hidden="true">
                             <path d="m19 19-3.5-3.5"></path>
                             <circle cx="11" cy="11" r="6"></circle>
@@ -33,7 +40,8 @@ export const Hero = () => {
                         </span>
                         <kbd className="font-sans font-semibold dark:text-slate-500">
                         <abbr title="Control" className="no-underline text-slate-300 dark:text-slate-500">Ctrl </abbr> K</kbd>
-                    </button>
+                    </Button>
+                    <CommandPalette isOpen={isOpen} setIsOpen={setIsOpen}/>
                 </div>
             </Container>
         </div>
