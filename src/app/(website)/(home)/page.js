@@ -39,16 +39,20 @@ export default function Home() {
                     }}/>
                 </div> */}
 
+                <section className="relative w-full grid grid-cols-2 h-screen sm:h-[calc(100vh_-20rem)] pt-10 overflow-hidden">
+                    <HeroHighlightBoard/>
+                </section>
 
-                <section className="max-w-6xl mx-auto my-20 justify-evenly">
-                    {/* <CardEffect className={`bg-green-200 dark:bg-purple-950`}> */}
+
+                {/* <section className="max-w-6xl mx-auto my-20 justify-evenly">
+                    <CardEffect className={`bg-green-200 dark:bg-purple-950`}>
                         <div className="grid items-center grid-cols-3 gap-3 h-96">
                             <MeteorsCard/>
                             <MeteorsCard/>
                             <MeteorsCard/>
                         </div>
-                    {/* </CardEffect> */}
-                </section>
+                    </CardEffect>
+                </section> */}
 
 
                 <section className="relative w-full h-screen sm:h-[calc(100vh_-10rem)] pt-10 overflow-hidden">
