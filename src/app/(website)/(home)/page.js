@@ -1,4 +1,4 @@
-
+"use client";
 import { Container } from "@/components/container";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
@@ -11,9 +11,20 @@ import { viewport as dataViewport } from "@/data/meta";
 import { HeroHighlightBoard } from "./hero-highlight-board";
 import { Meteors } from "@/components/meteors";
 import { MeteorsCard } from "./meteor-card";
+import Image from "next/image";
+import { PinBottomIcon, QuoteIcon } from "@radix-ui/react-icons";
+import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 export const viewport = dataViewport
 
 export default function Home() {
+
+    const router = useRouter()
+
+    // Scroll to id target id existing hash
+    useEffect(() => {
+        router.push(window.location.hash)
+    }, [ router ])
 
     return (
         <>
@@ -38,15 +49,50 @@ export default function Home() {
                         "--paused": "paused"
                     }}/>
                 </div> */}
-                <section className="relative w-full h-screen sm:h-[calc(100vh_-20rem)] pt-10 overflow-hidden">
 
-                    {/* background */}
-                    <section className="absolute w-full grid grid-cols-2 h-screen sm:h-[calc(100vh_-20rem)] pt-10 overflow-hidden">
+
+
+                <section className="relative items-center justify-center hidden w-full h-56 overflow-hidden sm:flex sm:mt-20">
+                    <div className="absolute inset-0">
                         <HeroHighlightBoard/>
-                    </section>
+                    </div>
+                    <Button title="quote" onClick={(e)=>{
+                        e.preventDefault()
+                        router.push("#quote")
+                    }} className="shadow-[0_4px_14px_0_rgb(0,118,255,39%)] duration-1000 hover:animate-none pointer-events-auto relative hover:shadow-[0_6px_20px_rgba(0,118,255,23%)]  bg-primary/90 rounded-full text-primary-foreground font-light transition ease-linear">
+                        <PinBottomIcon className="w-4 h-4"/>
+                        <span className="absolute -bottom-0 left-[1.125rem] h-px w-[calc(100%-2.25rem)] bg-gradient-to-r from-emerald-400/0 via-emerald-400/90 to-emerald-400/0 transition-opacity duration-500 group-hover:opacity-40"></span>
+                    </Button>
+                </section>
 
 
+                <div id="quote"></div>
 
+
+                <section className="relative w-full mt-20">
+                    {/* background */}
+                    <div className="absolute grid w-full h-[50rem] grid-cols-2 px-1 pt-10 overflow-hidden">
+                        <HeroHighlightBoard/>
+                    </div>
+                    <div className="grid gap-10 pointer-events-none sm:grid-cols-2 justify-evenly">
+                        <div className="z-10 w-full mx-auto">
+                            <Image
+                                width={512}
+                                height={512}
+                                className="object-cover w-full sm:w-96 aspect-square sm:aspect-[4/5] mx-auto sm:rounded-lg"
+                                src={`https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=300&h=300&q=80`}
+                                // src={data.image}
+                                alt={``}
+                            />
+                        </div>
+                        <div className="max-w-xl p-5 sm:p-0">
+                            <h2 className="inline-flex items-start text-base font-semibold leading-7 sr-only text-foreground">Quote</h2>
+                            <p className="relative flex flex-wrap mt-0 text-4xl font-extrabold tracking-tight sm:mt-4 text-primary">
+                                <QuoteIcon className="w-9 h-9 scale-x-[-1] -translate-x-4 sm:-translate-x-10"/> To share everything that we learned is our hobby.  <QuoteIcon className="absolute bottom-0 right-0 mt-1 w-9 h-9"/>
+                            </p>
+                            <p className="mt-6">{`Sharing knowledge and experiences with others is a wonderful hobby. It not only helps others learn and grow, but it also reinforces our own understanding and retention of the material. Plus, it's a great way to connect with like-minded individuals and build a sense of community.`}</p>
+                        </div>
+                    </div>
                 </section>
 
 
@@ -61,7 +107,7 @@ export default function Home() {
                 </section> */}
 
 
-                <section className="relative w-full h-screen sm:h-[calc(100vh_-10rem)] pt-10 overflow-hidden">
+                <section className="relative w-full h-screen sm:h-[calc(100vh_-10rem)] sm:mt-20 pt-10 overflow-hidden">
 
                     <div className="absolute inset-0 top-1/2">
                         <HeroHighlightBoard></HeroHighlightBoard>

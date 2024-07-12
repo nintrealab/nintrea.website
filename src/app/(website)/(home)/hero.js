@@ -12,7 +12,7 @@ export const Hero = () => {
                 WebkitMaskImage: "linear-gradient(to bottom, transparent, black)"
             }}/>
 
-            <Container className={cn('flex flex-col w-full gap-2 max-w-5xl h-full items-center justify-center relative mx-auto pt-20 sm:pt-20')}>
+            <Container className={cn('flex flex-col w-full gap-2 px-2 max-w-5xl h-full items-center justify-center relative mx-auto pt-10 sm:pt-20')}>
                 <a className="inline-flex items-center px-3 py-1 text-sm font-medium -translate-y-5 rounded-lg bg-muted" href="/">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4">
                         <rect width="7" height="7" x="14" y="3" rx="1"></rect>

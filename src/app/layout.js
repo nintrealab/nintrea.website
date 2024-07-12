@@ -15,7 +15,7 @@ export const metadata = defaultMeta
 
 export default function RootLayout({ children }) {
     return (
-        <html lang={'en'} suppressHydrationWarning={true}>
+        <html lang={'en'} suppressHydrationWarning={true} className="scroll-smooth">
             <body
                 className={cn(
                     "min-h-screen bg-background font-sans antialiased",
