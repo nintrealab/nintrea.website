@@ -38,9 +38,15 @@ export default function Home() {
                         "--paused": "paused"
                     }}/>
                 </div> */}
+                <section className="relative w-full h-screen sm:h-[calc(100vh_-20rem)] pt-10 overflow-hidden">
 
-                <section className="relative w-full grid grid-cols-2 h-screen sm:h-[calc(100vh_-20rem)] pt-10 overflow-hidden">
-                    <HeroHighlightBoard/>
+                    {/* background */}
+                    <section className="absolute w-full grid grid-cols-2 h-screen sm:h-[calc(100vh_-20rem)] pt-10 overflow-hidden">
+                        <HeroHighlightBoard/>
+                    </section>
+
+
+
                 </section>
 
 
