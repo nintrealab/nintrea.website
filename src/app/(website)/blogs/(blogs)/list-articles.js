@@ -2,8 +2,11 @@
 import { useMemo, useState } from 'react';
 import { Article, LoadingArticle } from './article';
 import { CardEffect } from '@/components/card-effect';
+import { cn } from '@/lib/utils';
 
-export const ListArticles = () => {
+export const ListArticles = ({
+    className
+}) => {
     const [data, setData] = useState({});
     const [posts, setPosts] = useState([]);
     const [isLoading, setLoading] = useState(true);
@@ -21,7 +24,7 @@ export const ListArticles = () => {
     });
 
     return (
-        <div className="grid max-w-5xl gap-4 mx-auto sm:grid-cols-2 md:grid-cols-3">
+        <div className={cn("grid max-w-5xl gap-4 mx-auto sm:grid-cols-2 md:grid-cols-3",className)}>
             {
                 isLoading
                 ? [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map( (_, key)=> {
