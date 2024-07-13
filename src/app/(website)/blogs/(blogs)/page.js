@@ -14,12 +14,9 @@ export default function Blogs() {
         <>
             <ContentBackground/>
             <Header/>
-
             <Hero/>
 
             <Container>
-                {/* <Footer/> */}
-
                 <ListArticles/>
                 <Footer/>
             </Container>
