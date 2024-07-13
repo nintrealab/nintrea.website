@@ -3,22 +3,16 @@ import { Container } from "@/components/container";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { Hero } from "./hero";
-import { CardSlider } from "@/components/card-slider";
-import { defaultMeta  } from "@/data/meta";
-import CommandPalette from "@/components/command-palette";
-// import { Author } from "@/components/author";
 import { ListArticles } from "../blogs/(blogs)/list-articles";
-import { ImageSlider } from "@/components/image-slider";
 import { Button } from "@/components/button";
 import { CardEffect } from "@/components/card-effect";
 import { viewport as dataViewport } from "@/data/meta";
 import { HeroHighlightBoard } from "./hero-highlight-board";
-import { Meteors } from "@/components/meteors";
-import { MeteorsCard } from "./meteor-card";
 import Image from "next/image";
 import { PinBottomIcon, QuoteIcon } from "@radix-ui/react-icons";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 export const viewport = dataViewport
 
 export default function Home() {
@@ -60,13 +54,10 @@ export default function Home() {
                     <div className="absolute inset-0">
                         <HeroHighlightBoard/>
                     </div>
-                    <Button title="quote" onClick={(e)=>{
-                        e.preventDefault()
-                        router.push("#quote")
-                    }} className="shadow-[0_4px_14px_0_rgb(0,118,255,39%)] duration-1000 hover:animate-none pointer-events-auto relative hover:shadow-[0_6px_20px_rgba(0,118,255,23%)]  bg-primary/90 rounded-full text-primary-foreground font-light transition ease-linear">
+                    <Link title="quote" href={'#quote'} className="shadow-[0_4px_14px_0_rgb(0,118,255,39%)] p-2 duration-1000 hover:animate-none pointer-events-auto relative hover:shadow-[0_6px_20px_rgba(0,118,255,23%)]  bg-primary/90 rounded-full text-primary-foreground font-light transition ease-linear">
                         <PinBottomIcon className="w-4 h-4"/>
                         <span className="absolute -bottom-0 left-[1.125rem] h-px w-[calc(100%-2.25rem)] bg-gradient-to-r from-emerald-400/0 via-emerald-400/90 to-emerald-400/0 transition-opacity duration-500 group-hover:opacity-40"></span>
-                    </Button>
+                    </Link>
                 </section>
 
 
