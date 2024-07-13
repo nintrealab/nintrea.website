@@ -2,7 +2,6 @@ import Image from "next/image"
 import Link from "next/link"
 import { parseISO, format } from 'date-fns';
 import { Skeleton } from "@/components/skeleton";
-import { GitHubLogoIcon, InstagramLogoIcon, LinkedInLogoIcon, TwitterLogoIcon } from "@radix-ui/react-icons";
 
 export const LoadingArticles = () => {
 
