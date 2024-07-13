@@ -1,7 +1,7 @@
 import { Button } from "@/components/button"
 import { Logo } from "@/components/logo"
-import { CheckCircleIcon } from "@heroicons/react/20/solid"
-import { FigmaLogoIcon, GitHubLogoIcon, InfoCircledIcon, InstagramLogoIcon, PlusIcon } from "@radix-ui/react-icons"
+import { CheckBadgeIcon, CheckCircleIcon } from "@heroicons/react/20/solid"
+import { CheckCircledIcon, CheckIcon, FigmaLogoIcon, GitHubLogoIcon, InfoCircledIcon, InstagramLogoIcon, PlusIcon } from "@radix-ui/react-icons"
 import Image from "next/image"
 
 export const ProfileHero = ({ data }) => {
@@ -19,11 +19,27 @@ export const ProfileHero = ({ data }) => {
                         />
                     </div>
                     <div className="mx-auto sm:ml-0">
-                        <h1 className="inline-flex items-center justify-center gap-2 text-2xl font-extrabold tracking-tight uppercase sm:text-3xl sm:justify-start text-primary">
-                            { data.fullname }
-                            <CheckCircleIcon className="size-5 sm:size-6 text-sky-600"/>
+                        <h1 className="inline-flex items-center justify-center gap-2 text-2xl font-extrabold tracking-tight w-fit sm:text-3xl sm:justify-start text-primary">
+                            <span className="relative">
+                                { data.fullname }
+                                <CheckBadgeIcon className="absolute top-1.5 -right-8 size-5 sm:size-6 text-sky-600"/>
+                            </span>
                         </h1>
                         <p className="text-center sm:text-left text-foreground/90">@{ data.username }</p>
+                        <div className="flex flex-row justify-center gap-2 mt-5 sm:justify-start">
+                            <label className="inline-flex px-2 py-1 text-xs border rounded-full">
+                                <span> {`Creator of Nintrea`} </span>
+                                <CheckIcon className="ml-1 size-4"/>
+                            </label>
+                            <label className="inline-flex px-2 py-1 text-xs border rounded-full">
+                                <span> {`Author`} </span>
+                                <CheckIcon className="ml-1 size-4"/>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div className="flex flex-row justify-center gap-2 text-center sm:text-left sm:justify-start">
+                        <p>Hello! I'm Least Sophat. I'm Web Front-End Developer and UIUX Designer @nintrea @uixbase</p>
                     </div>
 
                     <div className="flex flex-row justify-center gap-2 sm:justify-start">
@@ -42,6 +58,8 @@ export const ProfileHero = ({ data }) => {
                             <PlusIcon className="ml-1 size-4"/>
                         </Button>
                     </div>
+
+
                 </div>
 
                 <div className="absolute top-0 right-0 items-center justify-end hidden gap-2 sm:flex">

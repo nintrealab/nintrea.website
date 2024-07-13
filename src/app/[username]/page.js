@@ -33,15 +33,15 @@ export default function AuthorName()
             </div>
             <Container className={'max-w-7xl'}>
                 <ProfileHero data={{
-                    fullname: username,
-                    image: LOGO,
+                    fullname: "LEAT Sophat",
+                    image: "https://github.com/pphatdev.png",
                     username: username,
                 }}/>
             </Container>
 
             <div className="relative">
-                <div className="sticky top-0 z-10 w-full py-4 mx-auto mt-10 transition-all border-b border-foreground/10 scroll-smooth backdrop-blur-sm bg-background/70">
-                    <Container className={'max-w-7xl py-1 bg-background/90'}>
+                <div className="sticky top-0 z-10 w-full mx-auto mt-10 transition-all border-b border-foreground/10 scroll-smooth backdrop-blur-sm bg-background/70">
+                    <Container className={'max-w-7xl py-5 px-3 bg-background/90'}>
                         <ul role="menubar" className="flex items-center justify-start gap-x-4">
                             <li role="menuitem"> <Link href="#posts"> Posts </Link> </li>
                             <li role="menuitem"> <Link href="#about"> About </Link> </li>
