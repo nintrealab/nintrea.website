@@ -6,7 +6,7 @@ import Link from "next/link";
 export const Card = ({ data }) => {
     // console.log(data);
     return (
-        <article className="flex flex-col col-span-1 gap-0 divide-gray-200 rounded-lg text-centerdivide-y">
+        <article className="relative flex flex-col col-span-1 gap-0 divide-gray-200 rounded-lg text-centerdivide-y">
             <div className="w-full p-5 pb-2.5">
                 <Image
                     width={250}
@@ -18,7 +18,12 @@ export const Card = ({ data }) => {
                 />
             </div>
             <div className="flex flex-col items-start justify-start w-full p-5 py-2.5">
-                <h2 className="text-lg font-medium leading-8 text-gray-900">{data?.title}</h2>
+                <h2 className="text-lg font-medium leading-8 text-gray-900">
+                    <Link href={data?.username}>
+                        <span aria-hidden="true" className="absolute inset-0" />
+                        {data?.title}
+                    </Link>
+                </h2>
                 <dl className="flex flex-col justify-between mt-1 text-card-foreground/70">
                     <dt className="sr-only">Name</dt>
                     <dd className="leading-7">
@@ -34,7 +39,7 @@ export const Card = ({ data }) => {
                         </div>
                     </dd>
                     <dt className="sr-only">Title</dt>
-                    <dd className="flex items-center gap-3 mt-3 leading-7">
+                    <dd className="z-10 flex items-center gap-3 mt-3 leading-7">
                         <Link href={data.github} target="_blank">
                             <GitHubLogoIcon className="w-5 h-5" />
                         </Link>
