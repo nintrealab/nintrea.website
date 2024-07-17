@@ -14,7 +14,7 @@ export const Header = () => {
     return (
         <div className="sticky top-0 z-10 w-full py-2 mx-auto transition-all border-b border-foreground/10 scroll-smooth backdrop-blur-sm bg-background/70">
             <Container className={'flex w-full items-center px-3 justify-between'}>
-                <div className="w-fit">
+                <div className="w-fit max-w-16 sm:max-w-32">
                     <Link href="/" className="pb-2 cursor-pointer" aria-label={defaultMeta.title + ` Logo`}>
                         <Logo/>
                     </Link>
