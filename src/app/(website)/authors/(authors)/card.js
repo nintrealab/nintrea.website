@@ -1,10 +1,10 @@
+import { LinkComponent } from "@/components/link-button";
 import { Skeleton } from "@/components/skeleton";
-import { CheckIcon, GitHubLogoIcon, InstagramLogoIcon, LinkedInLogoIcon, TwitterLogoIcon } from "@radix-ui/react-icons";
+import { CheckIcon, FigmaLogoIcon, GitHubLogoIcon, InstagramLogoIcon, LinkedInLogoIcon, TwitterLogoIcon } from "@radix-ui/react-icons";
 import Image from "next/image"
 import Link from "next/link";
 
 export const Card = ({ data }) => {
-    // console.log(data);
     return (
         <article className="relative flex flex-col col-span-1 gap-0 divide-gray-200 rounded-lg text-centerdivide-y">
             <div className="w-full p-5 pb-2.5">
@@ -40,18 +40,26 @@ export const Card = ({ data }) => {
                     </dd>
                     <dt className="sr-only">Title</dt>
                     <dd className="z-10 flex items-center gap-3 mt-3 leading-7">
-                        <Link href={data.github} target="_blank">
-                            <GitHubLogoIcon className="w-5 h-5" />
-                        </Link>
-                        <Link href={data.linkedin} target="_blank">
-                            <LinkedInLogoIcon className="w-5 h-5" />
-                        </Link>
-                        <Link href={data.instagram} target="_blank">
-                            <InstagramLogoIcon className="w-5 h-5" />
-                        </Link>
-                        <Link href={data.x} target="_blank">
-                            <TwitterLogoIcon className="w-5 h-5" />
-                        </Link>
+                        {
+                            data?.github && <LinkComponent href={data?.github} target={'_blank'}>
+                                <GitHubLogoIcon className="size-4"/>
+                            </LinkComponent>
+                        }
+                        {
+                            data?.instagram && <LinkComponent href={data?.instagram} target={'_blank'}>
+                                <InstagramLogoIcon className="size-4"/>
+                            </LinkComponent>
+                        }
+                        {
+                            data?.figma && <LinkComponent href={data?.figma} target={'_blank'}>
+                                <FigmaLogoIcon className="size-4"/>
+                            </LinkComponent>
+                        }
+                        {
+                            data?.linkedin && <LinkComponent href={data?.linkedin} target={'_blank'}>
+                                <LinkedInLogoIcon className="size-4"/>
+                            </LinkComponent>
+                        }
                     </dd>
                 </dl>
             </div>
