@@ -3,6 +3,7 @@ import { ThemeProvider } from "@/components/theme-provider"
 import { Poppins } from "next/font/google"
 import { cn } from "@/lib/utils";
 import { defaultMeta } from "@/data/meta";
+import NextTopLoader from 'nextjs-toploader';
 
 const fontSans = Poppins({
     subsets: ["latin"],
@@ -28,6 +29,7 @@ export default function RootLayout({ children }) {
                     enableSystem
                     disableTransitionOnChange
                 >
+                    <NextTopLoader />
                     {children}
                 </ThemeProvider>
             </body>

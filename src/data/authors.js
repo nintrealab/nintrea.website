@@ -1,6 +1,7 @@
 export const authors = [
     {
         src: "https://github.com/pphatdev.png",
+        username: "@sophat",
         title: "LEAT Sophat",
         joined: "January 23 2020",
         roles:[
@@ -22,6 +23,7 @@ export const authors = [
     },
     {
         src: "https://github.com/SVA-bundittt.png",
+        username: "@bundit",
         title: "HOL Bundit",
         joined: "January 23 2020",
         roles:[
@@ -36,6 +38,7 @@ export const authors = [
     },
     {
         src: "https://github.com/sithuch.png",
+        username: "@sithuch",
         title: "CHHEM Sithuch",
         joined: "Jun 24 2024",
         roles:[
@@ -50,6 +53,7 @@ export const authors = [
     },
     {
         src: "https://github.com/vyniivaa-dev.png",
+        username: "@vyniivaa",
         title: "MEAN Navy",
         joined: "Jun 24 2024",
         roles:[
