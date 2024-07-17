@@ -6,6 +6,8 @@ import { ProfileHero } from "./hero";
 import Link from "next/link";
 import { ListArticles } from "../(website)/blogs/(blogs)/list-articles";
 import { authors } from "@/data/authors";
+import { viewport as dataViewport } from "@/data/meta";
+export const viewport = dataViewport
 
 export default function AuthorName()
 {

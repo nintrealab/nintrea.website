@@ -100,16 +100,19 @@ export const LoadingArticle = ({ data }) => {
 export const Article = ({ data }) => {
     const stringDate = data?.meta?.createdAt
     const date = parseISO(stringDate)
+
+    // console.log(date, data);
     return (
         <article className="flex flex-col col-span-1 gap-0 transition-all divide-gray-200 hover:ring-1 rounded-xl text-centerdivide-y hover:bg-card/50 ring-card drop-shadow-2xl">
             <div className="w-full p-5 pb-2.5 pt-7">
                 <Image
                     width={250}
                     height={250}
+                    loading="lazy"
                     className="flex-shrink-0 object-cover w-full aspect-[5/3] mx-auto rounded-lg"
-                    src={`https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=300&h=300&q=80`}
+                    src={`https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=250&h=250&q=80`}
                     // src={data.image}
-                    alt={data?.firstName +` `+ data?.lastName}
+                    alt={data?.description}
                 />
             </div>
             <div className="flex flex-col items-start justify-start w-full p-5 py-2.5 pb-7">

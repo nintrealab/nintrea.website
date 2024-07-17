@@ -55,22 +55,22 @@ export const ProfileHero = ({ data = {} }) => {
 
                     <div className="flex flex-row justify-center gap-2 sm:justify-start">
                         {
-                            data?.github && <LinkComponent href={data?.github} target={'_blank'}>
+                            data?.github && <LinkComponent href={data?.github} target={'_blank'} aria-label="Github">
                                 <GitHubLogoIcon className="size-4"/>
                             </LinkComponent>
                         }
                         {
-                            data?.instagram && <LinkComponent href={data?.instagram} target={'_blank'}>
+                            data?.instagram && <LinkComponent href={data?.instagram} target={'_blank'} aria-label="Instagram">
                                 <InstagramLogoIcon className="size-4"/>
                             </LinkComponent>
                         }
                         {
-                            data?.figma && <LinkComponent href={data?.figma} target={'_blank'}>
+                            data?.figma && <LinkComponent href={data?.figma} target={'_blank'} aria-label="Figma">
                                 <FigmaLogoIcon className="size-4"/>
                             </LinkComponent>
                         }
                         {
-                            data?.linkedin && <LinkComponent href={data?.linkedin} target={'_blank'}>
+                            data?.linkedin && <LinkComponent href={data?.linkedin} target={'_blank'} aria-label="LinkedIn">
                                 <LinkedInLogoIcon className="size-4"/>
                             </LinkComponent>
                         }
