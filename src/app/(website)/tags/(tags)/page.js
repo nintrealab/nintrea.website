@@ -19,7 +19,7 @@ export default function CardStackDemo() {
         <Header/>
         <Hero/>
         <Container>
-            <div className="flex w-1/3 justify-center m-auto ">
+            <div className="flex w-1/3 justify-center m-auto mt-0">
                 <div className="h-72 flex items-center justify-center m-2 w-full">
                     <CardStack items={CARDS} />
                 </div>
