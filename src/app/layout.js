@@ -11,7 +11,6 @@ const fontSans = Poppins({
     weight: ["400", "500", "600", "700"],
     variable: "--font-sans",
 })
-
 export const metadata = defaultMeta
 
 export default function RootLayout({ children }) {
