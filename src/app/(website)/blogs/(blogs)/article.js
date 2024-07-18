@@ -101,7 +101,6 @@ export const Article = ({ data }) => {
     const stringDate = data?.meta?.createdAt
     const date = parseISO(stringDate)
 
-    // console.log(date, data);
     return (
         <article className="flex flex-col col-span-1 gap-0 transition-all divide-gray-200 hover:ring-1 rounded-xl text-centerdivide-y hover:bg-card/50 ring-card drop-shadow-2xl">
             <div className="w-full p-5 pb-2.5 pt-7">
@@ -110,8 +109,9 @@ export const Article = ({ data }) => {
                     height={250}
                     loading="lazy"
                     className="flex-shrink-0 object-cover w-full aspect-[5/3] mx-auto rounded-lg"
-                    src={`https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=250&h=250&q=80`}
-                    // src={data.image}
+                    src={data?.thumbnail}
+                    decoding="async"
+                    data-nimg="1"
                     alt={data?.description}
                 />
             </div>

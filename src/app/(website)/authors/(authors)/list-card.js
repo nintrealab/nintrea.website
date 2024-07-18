@@ -1,8 +1,7 @@
 "use client"
-
-import { useMemo, useState } from "react";
 import { Card, LoadingCard } from "./card";
 import { authors } from "@/data/authors";
+import { CardEffect } from "@/components/card-effect";
 
 export const ListCards = () => {
     // const [users, setUsers] = useState([]);
@@ -20,17 +19,10 @@ export const ListCards = () => {
     // });
 
     return(
-        <div role="list" className="grid max-w-6xl grid-cols-1 gap-6 mx-auto lg:grid-cols-4">
+        <div role="list" className="grid max-w-6xl grid-cols-1 gap-3 mx-auto lg:grid-cols-4">
             {
-                // isLoading
-                // ? [1,2,3,4,5,6,7,8,9].map((_,key)=> <LoadingCard key={key}/>)
-                // : users.map((user, index) => {
-                //     return <Card key={index} data={user}/>
-                // })
-
-
-                authors.map((user, index) => {
-                    return <Card key={index} data={user}/>
+                authors && authors.map((user, index) => {
+                    return <CardEffect key={index}><Card data={user}/></CardEffect>
                 })
             }
         </div>

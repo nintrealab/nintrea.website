@@ -47,7 +47,7 @@ export default function AuthorName()
                                     </ul>
                                 </Container>
                             </div>
-                            <div className="divide-y dark:divide-slate-200/5">
+                            <div className="pb-10 divide-y dark:divide-slate-200/5">
                                 <ListArticles className={'w-full max-w-7xl xs:px-4 sm:px-6 md:px-8 xl:px-12  md:grid-cols-4 mt-10'}/>
                             </div>
                         </div>

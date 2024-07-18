@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export const Card = ({ data }) => {
     return (
-        <article className="relative flex flex-col col-span-1 gap-0 divide-gray-200 rounded-lg text-centerdivide-y">
+        <article className="relative flex flex-col h-full col-span-1 gap-0 divide-gray-200 rounded-lg text-centerdivide-y">
             <div className="w-full p-5 pb-2.5">
                 <Image
                     width={250}
@@ -17,8 +17,8 @@ export const Card = ({ data }) => {
                     alt={data?.title}
                 />
             </div>
-            <div className="flex flex-col items-start justify-start w-full p-5 py-2.5">
-                <h2 className="text-lg font-medium leading-8 text-gray-900">
+            <div className="flex flex-col items-start justify-start w-full p-5 pt-2.5 pb-5">
+                <h2 className="text-lg font-medium leading-8 text-foreground">
                     <Link href={data?.username}>
                         <span aria-hidden="true" className="absolute inset-0" />
                         {data?.title}

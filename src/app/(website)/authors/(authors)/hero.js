@@ -13,9 +13,9 @@ export const Hero = () => {
             <Container className={cn('flex flex-col w-full gap-2 max-w-5xl h-full items-center justify-center relative mx-auto pt-20 sm:pt-20')}>
 
                 <h1 className='text-4xl font-extrabold tracking-tight text-center text-slate-900 sm:text-5xl lg:text-6xl dark:text-white'>
-                    {`About the `}
-                    <span className='inline-block lg:text-6xl text-transparent bg-gradient-to-r from-primary via-green-500 to-[#064073] bg-clip-text'>
-                        {` Team`}
+                    {/* {`Authors`} */}
+                    <span className='inline-block text-transparent uppercase lg:text-6xl bg-gradient-to-r from-primary via-pink-500 to-primary bg-clip-text'>
+                        {`Authors`}
                     </span>
                 </h1>
                 <p className="max-w-3xl mx-auto mt-6 text-lg text-center text-slate-600 dark:text-slate-400">
