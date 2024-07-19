@@ -104,7 +104,7 @@ export const Article = ({ data }) => {
 
     return (
         <article className="flex flex-row col-span-1 gap-0 transition-all divide-gray-200 rounded-2xl sm:flex-col hover:ring-1 text-centerdivide-y hover:bg-card/50 ring-card drop-shadow-2xl">
-            <div className="p-3 sm:pb-2.5 sm:pt-7 flex-shrink-0">
+            <div className="p-3 sm:pb-2.5 sm:pt-7 flex-shrink-0 sm:px-5">
                 <Image
                     width={250}
                     height={250}
@@ -116,7 +116,7 @@ export const Article = ({ data }) => {
                     alt={data?.description}
                 />
             </div>
-            <div className="flex flex-col items-start justify-start w-full pl-2 pt-3 p-5 py-2.5 sm:pb-7">
+            <div className="flex flex-col items-start justify-start w-full pl-2 pt-3 p-5 py-2.5 sm:pb-7 sm:px-5">
                 <time dateTime={stringDate} className="text-xs text-foreground/90">{format(date, 'LLLL d, yyyy')}</time>
                 <h2 className="text-sm font-medium tracking-tight line-clamp-1 sm:font-semibold md:line-clamp-2 sm:line-clamp-1 text-slate-900 dark:text-slate-200 lg:pt-0">
                     {data?.title}

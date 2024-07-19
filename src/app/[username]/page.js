@@ -8,6 +8,8 @@ import { ListArticles } from "../(website)/blogs/(blogs)/list-articles";
 import { authors } from "@/data/authors";
 import { viewport as dataViewport } from "@/data/meta";
 import { SmallScreenHero } from "./small-screen-hero";
+import { SmallScreenHeader } from "@/components/small-header";
+import { CardEffect } from "@/components/card-effect";
 export const viewport = dataViewport
 
 export default function AuthorName()
@@ -19,6 +21,7 @@ export default function AuthorName()
     return (
         <>
             <Header className="hidden sm:block"/>
+            <SmallScreenHeader className="sm:hidden"/>
             {
                 author && (
                     <>
@@ -41,9 +44,9 @@ export default function AuthorName()
                         </Container>
 
                         <div className="relative">
-                            <div className="sticky z-10 w-full px-3 mx-auto mt-5 transition-all sm:border top-1 border-foreground/10 scroll-smooth">
-                                <Container className={'max-w-7xl py-2 sm:py-5 px-3 bg-background/90 rounded-xl border backdrop-blur-sm'}>
-                                    <ul role="menubar" className="flex items-center justify-start text-xs sm:text-base gap-x-4">
+                            <div className="sticky z-10 w-full px-3 mx-auto mt-5 transition-all top-1 sm:top-3 border-foreground/10 scroll-smooth">
+                                <Container className={'max-w-7xl py-2 sm:py-2 sm:px-3 xl:px-8 overflow-hidden bg-background/90 sm:bg-transparent rounded-xl sm:rounded-none border sm:border-none backdrop-blur-sm sm:backdrop-blur-none'}>
+                                    <ul role="menubar" className="flex items-center justify-start px-3 text-xs sm:px-0 sm:text-base gap-x-4">
                                         <li role="menuitem"> <Link href="#posts"> <span className="text-base">✍️</span> Posts </Link> </li>
                                         <li role="menuitem"> <Link href="#achievement"> <span className="text-base">🎉</span> Achievement </Link> </li>
                                         <li role="menuitem"> <Link href="#about"> <span className="text-base">🪶</span> About </Link> </li>
@@ -51,9 +54,35 @@ export default function AuthorName()
                                 </Container>
                             </div>
 
-                            <div className="pb-10 divide-y dark:divide-slate-200/5">
-                                <ListArticles className={'w-full max-w-7xl xs:px-4 sm:px-6 md:px-8 xl:px-12  md:grid-cols-4 mt-2 sm:mt-10'}/>
-                            </div>
+                            <section id="posts" className="pb-10 sm:border-t dark:divide-slate-200/5">
+                                <Container className={'max-w-7xl xl:px-6 py-0'}>
+                                    <h2 className="px-3 pt-12 pb-2 sm:pt-20">✍️ Posts</h2>
+                                </Container>
+                                <ListArticles className={'w-full max-w-7xl xs:px-4 sm:px-6 md:px-8 xl:px-12  md:grid-cols-4 mt-2 sm:mt-5'}/>
+                            </section>
+
+                            <section id="achievement" className="pb-10 border-t dark:divide-slate-200/5">
+                                <Container className={'max-w-7xl xl:px-6 py-0'}>
+                                    <h2 className="px-3 pt-12 pb-2 sm:pt-20">🎉 Achievement</h2>
+                                </Container>
+                                <section className="relative w-full h-screen sm:h-[calc(100vh_-10rem)] pt-1 sm:pt-10 overflow-hidden">
+                                    <CardEffect className={`bg-green-200 dark:bg-purple-950`}>
+
+                                    </CardEffect>
+                                </section>
+                            </section>
+
+                            <section id="about" className="pb-10 border-t dark:divide-slate-200/5">
+                                <Container className={'max-w-7xl xl:px-6 py-0'}>
+                                    <h2 className="px-3 pt-12 pb-2 sm:pt-20">🪶 About</h2>
+                                </Container>
+                                <section className="relative w-full h-screen sm:h-[calc(100vh_-10rem)] pt-1 sm:pt-10 overflow-hidden">
+                                    <CardEffect className={`bg-green-200 dark:bg-purple-950`}>
+
+                                    </CardEffect>
+                                </section>
+                            </section>
+
                         </div>
                     </>
                 )
