@@ -7,6 +7,7 @@ import Link from "next/link";
 import { ListArticles } from "../(website)/blogs/(blogs)/list-articles";
 import { authors } from "@/data/authors";
 import { viewport as dataViewport } from "@/data/meta";
+import { SmallScreenHero } from "./small-screen-hero";
 export const viewport = dataViewport
 
 export default function AuthorName()
@@ -17,7 +18,7 @@ export default function AuthorName()
 
     return (
         <>
-            <Header/>
+            <Header className="hidden sm:block"/>
             {
                 author && (
                     <>
@@ -36,19 +37,22 @@ export default function AuthorName()
                         </div>
                         <Container className={'max-w-7xl'}>
                             <ProfileHero data={ author }/>
+                            <SmallScreenHero data={ author }/>
                         </Container>
 
                         <div className="relative">
-                            <div className="sticky top-0 z-10 w-full mx-auto mt-10 transition-all border-b border-foreground/10 scroll-smooth backdrop-blur-sm bg-background/70">
-                                <Container className={'max-w-7xl py-5 px-3 bg-background/90'}>
-                                    <ul role="menubar" className="flex items-center justify-start gap-x-4">
-                                        <li role="menuitem"> <Link href="#posts"> Posts </Link> </li>
-                                        <li role="menuitem"> <Link href="#about"> About </Link> </li>
+                            <div className="sticky z-10 w-full px-3 mx-auto mt-5 transition-all sm:border top-1 border-foreground/10 scroll-smooth">
+                                <Container className={'max-w-7xl py-2 sm:py-5 px-3 bg-background/90 rounded-xl border backdrop-blur-sm'}>
+                                    <ul role="menubar" className="flex items-center justify-start text-xs sm:text-base gap-x-4">
+                                        <li role="menuitem"> <Link href="#posts"> <span className="text-base">✍️</span> Posts </Link> </li>
+                                        <li role="menuitem"> <Link href="#achievement"> <span className="text-base">🎉</span> Achievement </Link> </li>
+                                        <li role="menuitem"> <Link href="#about"> <span className="text-base">🪶</span> About </Link> </li>
                                     </ul>
                                 </Container>
                             </div>
+
                             <div className="pb-10 divide-y dark:divide-slate-200/5">
-                                <ListArticles className={'w-full max-w-7xl xs:px-4 sm:px-6 md:px-8 xl:px-12  md:grid-cols-4 mt-10'}/>
+                                <ListArticles className={'w-full max-w-7xl xs:px-4 sm:px-6 md:px-8 xl:px-12  md:grid-cols-4 mt-2 sm:mt-10'}/>
                             </div>
                         </div>
                     </>
