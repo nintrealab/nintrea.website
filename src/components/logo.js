@@ -118,7 +118,7 @@ const path2 = (`M218.741 175.356V167.839H224.038V169.705H223.292V171.794L224.971
 
 export const Logo = ({ className }) => {
     return (
-        <svg width="512" height="267" className={cn("h-12 w-full text-foreground", className)} viewBox="0 0 512 267" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <svg width="512" height="267" className={cn("h-12 w-full text-foreground", className)} viewBox="0 0 512 267" fill="currentColor">
             <path d={path1} fill="url(#paint0_linear_518_33)"/>
             <path d={path2} fill="url(#paint1_linear_518_33)"/>
             <defs>

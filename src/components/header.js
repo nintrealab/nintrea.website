@@ -12,7 +12,7 @@ import { cn } from "@/lib/utils";
 export const Header = ({ className = "" }) => {
     const path = usePathname();
     return (
-        <div className={cn(className,"sticky top-0 z-10 w-full py-2 mx-auto transition-all border-b border-foreground/10 scroll-smooth backdrop-blur-sm bg-background/70")}>
+        <div className={cn(className,"w-full py-2 mx-auto transition-all border-b border-foreground/10 backdrop-blur-sm bg-background/70")}>
             <Container className={'flex w-full items-center px-3 justify-between'}>
                 <div className="w-fit max-w-16 sm:max-w-32">
                     <Link href="/" className="pb-2 cursor-pointer" aria-label={defaultMeta.title + ` Logo`}>
@@ -42,7 +42,7 @@ export const Header = ({ className = "" }) => {
                         </svg>
                     </a>
                     <ModeToggle />
-                    <SmallScreenMenu className="sm:hidden"/>
+                    {/* <SmallScreenMenu className="sm:hidden"/> */}
                 </div>
             </Container>
         </div>
