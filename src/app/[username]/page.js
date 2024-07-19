@@ -1,6 +1,5 @@
 "use client"
 import { Container } from "@/components/container";
-import { Header } from "@/components/header";
 import { useParams } from "next/navigation";
 import { ProfileHero } from "./hero";
 import Link from "next/link";
@@ -8,7 +7,6 @@ import { ListArticles } from "../(website)/blogs/(blogs)/list-articles";
 import { authors } from "@/data/authors";
 import { viewport as dataViewport } from "@/data/meta";
 import { SmallScreenHero } from "./small-screen-hero";
-import { SmallScreenHeader } from "@/components/small-header";
 import { CardEffect } from "@/components/card-effect";
 export const viewport = dataViewport
 
@@ -20,8 +18,6 @@ export default function AuthorName()
 
     return (
         <>
-            <Header className="hidden sm:block"/>
-            <SmallScreenHeader className="sm:hidden"/>
             {
                 author && (
                     <>

@@ -1,6 +1,5 @@
 "use client"
 import { Container } from "@/components/container";
-import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { Hero } from "./hero";
 import { ContentBackground } from "../../blogs/(blogs)/content-background";
@@ -14,8 +13,6 @@ export const Detail = () => {
     return (
         <>
             <ContentBackground/>
-            <Header/>
-
             <Hero/>
 
             <Container>

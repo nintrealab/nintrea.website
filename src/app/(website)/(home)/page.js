@@ -1,6 +1,5 @@
 "use client";
 import { Container } from "@/components/container";
-import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { Hero } from "./hero";
 import { ListArticles } from "../blogs/(blogs)/list-articles";
@@ -26,7 +25,6 @@ export default function Home() {
 
     return (
         <>
-            <Header/>
             <Hero/>
             <Container>
 
