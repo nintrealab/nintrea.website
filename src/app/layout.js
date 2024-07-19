@@ -4,6 +4,7 @@ import { Poppins, Ubuntu } from "next/font/google"
 import { cn } from "@/lib/utils";
 import { defaultMeta } from "@/data/meta";
 import NextTopLoader from 'nextjs-toploader';
+import { Wrapper } from "@/components/wrapper";
 
 const ubuntu = Ubuntu({
     subsets: ["latin"],
@@ -18,6 +19,7 @@ const fontSans = Poppins({
     weight: ["400", "500", "600", "700"],
     variable: "--font-sans",
 })
+
 export const metadata = defaultMeta
 
 export default function RootLayout({ children }) {
@@ -37,7 +39,9 @@ export default function RootLayout({ children }) {
                     disableTransitionOnChange
                 >
                     <NextTopLoader />
-                    {children}
+                    <Wrapper>
+                        {children}
+                    </Wrapper>
                 </ThemeProvider>
             </body>
         </html>
