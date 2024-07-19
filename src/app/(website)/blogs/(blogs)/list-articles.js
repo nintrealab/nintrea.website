@@ -10,7 +10,7 @@ export const ListArticles = ({
     const posts = samplePost
 
     return (
-        <div className={cn("grid max-w-5xl gap-4 mx-auto sm:grid-cols-2 md:grid-cols-3",className)}>
+        <div className={cn("grid max-w-5xl gap-2 sm:gap-4 mx-auto sm:grid-cols-2 md:grid-cols-3 px-3",className)}>
             {
                 // isLoading
                 // ? [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map( (_, key)=> {

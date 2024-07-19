@@ -25,6 +25,7 @@ module.exports = {
         extend: {
             fontFamily: {
                 sans: ["var(--font-sans)", "sans-serif"],
+                ubuntu: ["var(--font-ubuntu)", "sans-serif"],
             },
             colors: {
                 border: "hsl(var(--border))",

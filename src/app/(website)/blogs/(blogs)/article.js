@@ -98,35 +98,36 @@ export const LoadingArticle = ({ data }) => {
 }
 
 export const Article = ({ data }) => {
+
     const stringDate = data?.meta?.createdAt
     const date = parseISO(stringDate)
 
     return (
-        <article className="flex flex-col col-span-1 gap-0 transition-all divide-gray-200 hover:ring-1 rounded-xl text-centerdivide-y hover:bg-card/50 ring-card drop-shadow-2xl">
-            <div className="w-full p-5 pb-2.5 pt-7">
+        <article className="flex flex-row col-span-1 gap-0 transition-all divide-gray-200 rounded-2xl sm:flex-col hover:ring-1 text-centerdivide-y hover:bg-card/50 ring-card drop-shadow-2xl">
+            <div className="p-3 sm:pb-2.5 sm:pt-7 flex-shrink-0">
                 <Image
                     width={250}
                     height={250}
                     loading="lazy"
-                    className="flex-shrink-0 object-cover w-full aspect-[5/3] mx-auto rounded-lg"
+                    className="flex-shrink-0 object-cover bg-red-300 w-32 sm:w-full aspect-[4/2.5] sm:aspect-[5/3] sm:mx-auto rounded-lg"
                     src={data?.thumbnail}
                     decoding="async"
                     data-nimg="1"
                     alt={data?.description}
                 />
             </div>
-            <div className="flex flex-col items-start justify-start w-full p-5 py-2.5 pb-7">
+            <div className="flex flex-col items-start justify-start w-full pl-2 pt-3 p-5 py-2.5 sm:pb-7">
                 <time dateTime={stringDate} className="text-xs text-foreground/90">{format(date, 'LLLL d, yyyy')}</time>
-                <h2 className="pt-5 text-base font-semibold tracking-tight line-clamp-2 sm:line-clamp-1 text-slate-900 dark:text-slate-200 lg:pt-0">
+                <h2 className="text-sm font-medium tracking-tight line-clamp-1 sm:font-semibold md:line-clamp-2 sm:line-clamp-1 text-slate-900 dark:text-slate-200 lg:pt-0">
                     {data?.title}
                 </h2>
 
-                <p className="mt-2 mb-3 line-clamp-2">
+                <p className="mt-2 text-xs sm:mb-3 sm:text-base line-clamp-2">
                     {data?.description}
                 </p>
-                <div className="flex items-center justify-between w-full text-right">
-                    <Link className="flex items-center text-sm font-medium from-left text-primary" href="/blogs/title-blogs">
-                        <span className="relative text-xs sm:text-sm">
+                <div className="items-center justify-between hidden w-full text-right sm:flex">
+                    <Link className="flex items-center text-[10px] sm:font-medium sm:text-sm from-left text-primary" href="/blogs/title-blogs">
+                        <span className="relative text-xs bg-transparent rounded-2xl sm:text-sm">
                             Read more<span className="sr-only">{data?.title}</span>
                         </span>
                         <svg className="relative mt-px overflow-visible ml-2.5 text-primary/90 dark:text-primary" width="3" height="6" viewBox="0 0 3 6" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

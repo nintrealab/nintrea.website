@@ -26,7 +26,7 @@ export function CardEffect({ className, children }) {
     };
 
     return (
-        <div className={'relative overflow-hidden h-full transition-colors duration-300 bg-card/50 hover:ring-border ring-1 ring-inset ring-border/90 sm:rounded-3xl'}
+        <div className={'relative overflow-hidden h-full transition-colors duration-300 bg-card/50 hover:ring-border ring-1 ring-inset ring-border/90 rounded-2xl sm:rounded-3xl'}
             onMouseMove={handleMouseMove}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}

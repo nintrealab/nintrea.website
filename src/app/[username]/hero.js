@@ -1,15 +1,13 @@
 import { Button } from "@/components/button"
 import { LinkComponent } from "@/components/link-button"
-import { Logo } from "@/components/logo"
-import { CheckBadgeIcon, CheckCircleIcon } from "@heroicons/react/20/solid"
-import { CheckCircledIcon, CheckIcon, FigmaLogoIcon, GitHubLogoIcon, InfoCircledIcon, InstagramLogoIcon, LinkedInLogoIcon, PlusIcon } from "@radix-ui/react-icons"
+import { CheckBadgeIcon } from "@heroicons/react/20/solid"
+import { CheckIcon, FigmaLogoIcon, GitHubLogoIcon, InfoCircledIcon, InstagramLogoIcon, LinkedInLogoIcon, PlusIcon } from "@radix-ui/react-icons"
 import Image from "next/image"
-import Link from "next/link"
 
 export const ProfileHero = ({ data = {} }) => {
     return(
         <>
-            <div className="relative w-full">
+            <div className="relative hidden w-full sm:block">
                 <div className="z-40 flex flex-col justify-center w-full gap-5 mt-10 sm:mt-12">
                     <div className="flex items-center mx-auto sm:ml-0">
                         <Image

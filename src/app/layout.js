@@ -1,9 +1,16 @@
 import "@/styles/globals.css";
 import { ThemeProvider } from "@/components/theme-provider"
-import { Poppins } from "next/font/google"
+import { Poppins, Ubuntu } from "next/font/google"
 import { cn } from "@/lib/utils";
 import { defaultMeta } from "@/data/meta";
 import NextTopLoader from 'nextjs-toploader';
+
+const ubuntu = Ubuntu({
+    subsets: ["latin"],
+    display: 'swap',
+    weight: ["300", "400", "500", "700"],
+    variable: "--font-ubuntu",
+})
 
 const fontSans = Poppins({
     subsets: ["latin"],
@@ -20,7 +27,8 @@ export default function RootLayout({ children }) {
             <body
                 className={cn(
                     "min-h-screen bg-background font-sans antialiased",
-                    fontSans.variable
+                    fontSans.variable,
+                    ubuntu.variable,
                 )}
             >
                 <ThemeProvider
