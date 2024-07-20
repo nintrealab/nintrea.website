@@ -19,7 +19,7 @@ const people = [
     { id: 8, name: 'Amozirah', url: '#' },
     // More people...
 ]
- 
+
 export default function CommandPalette({ isOpen=false, setIsOpen = ()=>{} })
 {
     const [ query, setQuery ] = useState("");
@@ -39,57 +39,54 @@ export default function CommandPalette({ isOpen=false, setIsOpen = ()=>{} })
 
             <DialogBackdrop
                 transition
-                className="fixed top-0 left-0 w-full h-full backdrop-blur-sm bg-gray-900 bg-opacity-10 transition-opacity 
-                        data-[closed]:opacity-0 data-[enter]:duration-300 data-[leave]:duration-200 data-[enter]:ease-out data-[leave]:ease-in 
-                        z-50 "
+                className="fixed top-0 left-0 w-full h-full backdrop-blur-sm bg-gray-900 bg-opacity-10 transition-opacity data-[closed]:opacity-0 data-[enter]:duration-300 data-[leave]:duration-200 data-[enter]:ease-out data-[leave]:ease-in z-50 "
             />
             <div className="fixed inset-0 z-50 w-screen overflow-y-auto p-4 sm:p-6 md:p-20 md:pt-[20vh]">
-            <DialogPanel
-                transition
-                className="mx-auto max-w-xl transform divide-y divide-gray-100 overflow-hidden rounded-xl opacity-85 bg-white shadow-2xl ring-1 ring-black ring-opacity-5 transition-all data-[closed]:scale-95 data-[closed]:opacity-0 data-[enter]:duration-300 data-[leave]:duration-200 data-[enter]:ease-out data-[leave]:ease-in"
-                >
+                <DialogPanel
+                    transition
+                    className="mx-auto max-w-xl transform divide-y divide-gray-100 overflow-hidden rounded-xl opacity-85 bg-white shadow-2xl ring-1 ring-black ring-opacity-5 transition-all data-[closed]:scale-95 data-[closed]:opacity-0 data-[enter]:duration-300 data-[leave]:duration-200 data-[enter]:ease-out data-[leave]:ease-in"
+                    >
                     <Combobox
                         onChange={(person) => {
-                        if (person) {
-                            window.location = person.url
-                        }
+                            if (person) {
+                                window.location = person.url
+                            }
                         }}
                     >
                         <div className="relative">
-                        <MagnifyingGlassIcon
-                            className="pointer-events-none absolute left-4 top-3.5 h-5 w-5 text-gray-400"
-                            aria-hidden="true"
-                        />
-                        <ComboboxInput
-                            autoFocus
-                            className="h-12 w-full border-0 bg-transparent pl-11 pr-4 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm "
-                            placeholder="Search..."
-                            onChange={(event) => setQuery(event.target.value)}
-                            onBlur={() => setQuery('')}
-                        />
+                            <MagnifyingGlassIcon
+                                className="pointer-events-none absolute left-4 top-3.5 h-5 w-5 text-gray-400"
+                                aria-hidden="true"
+                            />
+                            <ComboboxInput
+                                autoFocus
+                                className="w-full h-12 pr-4 text-gray-900 bg-transparent border-0 pl-11 placeholder:text-gray-400 focus:ring-0 sm:text-sm "
+                                placeholder="Search..."
+                                onChange={(event) => setQuery(event.target.value)}
+                                onBlur={() => setIsOpen(false)}
+                            />
                         </div>
 
                         {filteredPeople.length > 0 && (
-                        <ComboboxOptions className="max-h-72 scroll-py-2 divide-y divide-gray-200 overflow-y-scroll scrollbar scrollbar-width-10 scrollbar-height-10  py-2 text-sm text-gray-800">
-                            {filteredPeople.map((person) => (
-                            <ComboboxOption
-                                key={person.id}
-                                value={person}
-                                className="transition delay-0  scroll-smooth select-none px-4 py-3 data-[focus]:bg-gray-200 data-[focus]hover:text-sky-300 hover:text-sky-500"
-                            >
-                                {person.name}
-                            </ComboboxOption>
-                            ))}
-                        </ComboboxOptions>
+                            <ComboboxOptions className="py-2 overflow-y-scroll text-sm text-gray-800 divide-y divide-gray-200 max-h-72 scroll-py-2 scrollbar scrollbar-width-10 scrollbar-height-10">
+                                {filteredPeople.map((person) => (
+                                    <ComboboxOption
+                                        key={person.id}
+                                        value={person}
+                                        className="transition delay-0  scroll-smooth select-none px-4 py-3 data-[focus]:bg-gray-200 data-[focus]hover:text-sky-300 hover:text-sky-500"
+                                    >
+                                        {person.name}
+                                    </ComboboxOption>
+                                ))}
+                            </ComboboxOptions>
                         )}
 
                         {query !== '' && filteredPeople.length === 0 && (
-                        <p className="p-4 text-sm text-gray-500">No people found.</p>
+                            <p className="p-4 text-sm text-gray-500">No people found.</p>
                         )}
                     </Combobox>
-            </DialogPanel>
+                </DialogPanel>
             </div>
-        
         </Dialog>
     )
 }
