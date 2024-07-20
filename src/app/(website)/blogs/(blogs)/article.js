@@ -135,6 +135,10 @@ export const Article = ({ data }) => {
                         </svg>
                     </Link>
                 </div>
+
+                <Link className="absolute inset-0 bg-transparent sm:hidden" href="/blogs/title-blogs">
+                    <span className="sr-only">{data?.title}</span>
+                </Link>
             </div>
         </article>
     )
