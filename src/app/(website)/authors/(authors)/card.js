@@ -39,7 +39,7 @@ export const Card = ({ data }) => {
                         </div>
                     </dd>
                     <dt className="sr-only">Title</dt>
-                    <dd className="z-10 flex items-center gap-3 mt-3 leading-7">
+                    <dd className="z-10 flex items-center gap-3 mt-3 leading-7 pointer-events-none">
                         {
                             data?.github && <LinkComponent href={data?.github} target={'_blank'}>
                                 <GitHubLogoIcon className="size-4"/>
