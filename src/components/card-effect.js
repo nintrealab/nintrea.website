@@ -33,7 +33,7 @@ export function CardEffect({ className, children }) {
             ref={containerRef}>
                 {children}
             <div
-                className={cn('absolute w-1/3 h-full rounded-full blur-[120px] bg-green-300 pointer-events-none', className)}
+                className={cn('absolute w-full h-full rounded-full blur-[120px] bg-green-300 pointer-events-none', className)}
                 style={{
                     left: hoverPosition.x,
                     top: hoverPosition.y,

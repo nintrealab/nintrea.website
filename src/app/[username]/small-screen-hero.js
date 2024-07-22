@@ -31,7 +31,7 @@ export const SmallScreenHero = ({ data = {} }) => {
                             </LinkComponent>
                         }
                     </div>
-                    <div className="relative flex items-end justify-center gap-3 mt-20 sm:justify-start sm:mt-0 sm:ml-0">
+                    <div className="relative flex items-end justify-center gap-3 mt-16 sm:justify-start sm:mt-0 sm:ml-0">
 
                         <div className="relative">
                             <Image
@@ -39,7 +39,7 @@ export const SmallScreenHero = ({ data = {} }) => {
                                 alt={ `${ data?.title } profile picture` }
                                 width="200"
                                 height="200"
-                                className="border-4 rounded-full border-background ring-2 ring-inset ring-border size-24 sm:size-32 drop-shadow sm:rounded-3xl"
+                                className="border-4 rounded-full border-background ring-2 ring-inset ring-border size-28 sm:size-32 drop-shadow sm:rounded-3xl"
                             />
                             { data?.verified && <CheckBadgeIcon className="absolute rounded-full bg-background bottom-1.5 right-0.5 size-6 text-sky-600 sm:hidden"/> }
                         </div>

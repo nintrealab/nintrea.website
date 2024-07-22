@@ -41,12 +41,12 @@ export const Wrapper = ({ children }) => {
             <Header className={!isVisible ? '':'transition duration-300 -translate-y-16 sm:translate-y-0'}/>
 
             {/* Content */}
-            <div className="flex flex-col items-center justify-center min-h-screen">
+            <div className="flex flex-col items-center justify-center">
                 {children}
             </div>
 
             {/* Small Screen Navigation */}
-            <div className={cn(isVisible ? "opacity-100 sm:hidden" : "opacity-0 pointer-events-none -bottom-10", "transition duration-300  fixed z-50 w-full px-3 mx-auto bottom-3 sm:border border-foreground/10 scroll-smooth")}>
+            <div className={cn(isVisible ? "opacity-100 sm:hidden" : "opacity-0 pointer-events-none -bottom-10", "transition duration-300  sticky z-50 w-full px-3 mx-auto bottom-3 sm:border border-foreground/10 scroll-smooth")}>
                 <Container className={'max-w-7xl w-[90%] pt-2 pb-1 sm:py-5 px-3 bg-background/90 rounded-full overflow-hidden border'}>
                     <ul role="menubar" className="flex items-center mx-auto text-[10px] justify-evenly max-w-60 sm:text-base gap-x-4  backdrop-blur-sm">
                         <li role="menuitem"> <button type="button" onClick={router.back} className="flex flex-col items-center justify-center"> <ResetIcon className="size-4"/> <span>Back</span> </button> </li>
@@ -62,7 +62,7 @@ export const Wrapper = ({ children }) => {
             <Button
                 size="icon"
                 variant="outline"
-                className={`${isVisible ? "opacity-100 flex" : "hidden opacity-0 -bottom-10"} fixed z-[9999] bottom-16 sm:bottom-5 left-1/2 -translate-x-1/2 sm:left-auto sm:right-5 rounded-full `}
+                className={`${isVisible ? "opacity-100 flex" : "hidden opacity-0 -bottom-10"} fixed z-[9999] bottom-14 sm:bottom-5 left-1/2 -translate-x-1/2 sm:left-auto sm:right-5 rounded-full `}
                 onClick={scrollToTop}
             >
                 <TriangleUpIcon className="size-5"/>
