@@ -19,10 +19,14 @@ export const ListCards = () => {
     // });
 
     return(
-        <div role="list" className="grid max-w-6xl grid-cols-1 gap-3 mx-auto lg:grid-cols-4">
+        <div role="list" className="grid grid-cols-2 gap-3 p-3 mx-auto mt-10 max-w-7xl lg:grid-cols-4">
             {
                 authors && authors.map((user, index) => {
-                    return <CardEffect key={index}><Card data={user}/></CardEffect>
+                    return (
+                        <CardEffect key={index}>
+                            <Card data={user}/>
+                        </CardEffect>
+                    )
                 })
             }
         </div>
