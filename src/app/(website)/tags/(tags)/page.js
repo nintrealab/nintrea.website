@@ -8,6 +8,7 @@ export const viewport = dataViewport
 
 import { CardStack } from "@/components/card-stack";
 import { Hero } from "./hero";
+import { Topic } from "@/components/topic-tag";
 // import { Container } from "postcss";
 
 export default function CardStackDemo() {
@@ -16,6 +17,7 @@ export default function CardStackDemo() {
             <ContentBackground/>
             <Hero/>
             <Container>
+                <Topic></Topic>
                 <div className="flex justify-center w-1/3 m-auto mt-0">
                     <div className="flex items-center justify-center w-full m-2 h-72">
                         <CardStack items={CARDS} />
