@@ -17,15 +17,16 @@ export default function CardStackDemo() {
             <ContentBackground/>
             <Hero/>
             <Container>
-                <Topic></Topic>
+                <Topic/>
+                <h2 className="text-4xl font-extrabold tracking-tight text-center text-slate-900 sm:text-5xl lg:text-6xl dark:text-white h-[5rem] mt-20">Main Card</h2>
                 <div className="flex justify-center w-1/3 m-auto mt-0">
-                    <div className="flex items-center justify-center w-full m-2 h-72">
+                    <div className="flex items-center justify-center w-full m-2 h-[25rem]">
                         <CardStack items={CARDS} />
                     </div>
-                    <div className="flex items-center justify-center w-full m-2 h-72">
+                    <div className="flex items-center justify-center w-full m-2 h-[25rem]">
                         <CardStack items={CARDS} />
                     </div>
-                    <div className="flex items-center justify-center w-full m-2 h-72">
+                    <div className="flex items-center justify-center w-full m-2 h-[25rem]">
                         <CardStack items={CARDS} />
                     </div>
                 </div>
