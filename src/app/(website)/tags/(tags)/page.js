@@ -16,6 +16,7 @@ export default function CardStackDemo() {
         <>
             <ContentBackground/>
             <Hero/>
+            
             <Container>
                 <Topic/>
                 <h2 className="text-4xl font-extrabold tracking-tight text-center text-slate-900 sm:text-5xl lg:text-6xl dark:text-white h-[5rem] mt-20">Main Card</h2>
