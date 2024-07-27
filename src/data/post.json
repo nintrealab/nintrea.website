@@ -1,0 +1,50 @@
+{
+    "name": "will-be-url",
+    "title": "Headless UI v2.1: Simplified transition API and improved multi-dialog support",
+    "descriptions": "Headless UI v2.1: Simplified transition API and improved multi-dialog support",
+    "breadcrumbs": [
+        { "title": "Home", "route": "/" },
+        { "title": "Get Started", "route": "/doc" },
+        { "title": "Installations", "route": "/doc/installations" }
+    ],
+    "authors": [
+        { "title": "Leat Sophat", "username": "@leatsophat", "profile": "https://github.com/pphatdev.png" },
+        { "title": "Chhem Sithuch", "username": "@chhemsithuch", "profile": "https://github.com/pphatdev.png" }
+    ],
+    "content": [
+        {
+            "type": "image",
+            "text": "Sample Image",
+            "src": "https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+        },
+        {
+            "type": "p",
+            "text": "This is sample paragraph text for the project"
+        },
+        {
+            "type": "h2",
+            "text": "Heading 2 title"
+        },
+        {
+            "type": "h3",
+            "text": "Heading 3 title"
+        },
+        {
+            "type": "h4",
+            "text": "Heading 4 title"
+        },
+        {
+            "type": "h5",
+            "text": "Heading 5 title"
+        },
+        {
+            "type": "h6",
+            "text": "Heading 6 title"
+        },
+        {
+            "type": "section",
+            "items": "We got some paragraph here. This is sample paragraph text for the project"
+        }
+
+    ]
+}
