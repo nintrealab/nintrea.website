@@ -5,20 +5,22 @@ import Profle from "@/assets/images/profile.png"
 export const PostHeader = () => {
     return (
         <>
-            <div className="relative sm:pb-12 sm:ml-[calc(2rem+1px)] md:ml-[calc(3.5rem+1px)] lg:ml-[max(calc(14.5rem+1px),calc(100%-65rem))]">
-                <div className="">
+            <div className="relative mt-24">
+                <div>
                     <div>Monday, July 1st 2014</div>
-                    <h1 className="text-2xl font-bold mt-5">Headless UI v2.0 for React</h1>
-                    <div className="flex mt-5">
+                    <h1 className="mt-5 text-2xl font-bold">
+                        Headless UI v2.1: Simplified transition API and improved multi-dialog support
+                    </h1>
+                    <div className="flex items-center mt-5">
                         <Image
                             src={Profle.src}
                             width={500}
                             height={500}
-                            alt="Picture of the author" className="rounded-full w-14 h-14 object-cover"
+                            alt="Picture of the author" className="object-cover rounded-full w-14 h-14"
                         />
-                        <div className="mt-2 ml-10">
-                            <p>Hello</p>
-                            <Link href="#" className="text-sky-500">@Hello</Link>
+                        <div className="ml-5">
+                            <p className="font-semibold leading-6">CHHEM Sithuch</p>
+                            <Link href="#" className="text-sky-500">@chhemsithuch</Link>
                         </div>
                     </div>
                     <div className="mt-5">
@@ -26,7 +28,7 @@ export const PostHeader = () => {
                             src={Profle.src}
                             width={500}
                             height={500}
-                            alt="Picture of the author" className="justify-items-center container rounded-lg"
+                            alt="Picture of the author" className="object-cover w-full rounded-xl aspect-video justify-items-center"
                         />
                     </div>
                 </div>
