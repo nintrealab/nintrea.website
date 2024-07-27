@@ -19,7 +19,7 @@ export const Detail = () => {
                 maskImage: "linear-gradient(to bottom, transparent, black)",
                 WebkitMaskImage: "linear-gradient(to bottom, transparent, black)"
             }}></div>
-            <Container className={'max-w-4xl mx-auto'}>
+            <Container className={'max-w-4xl mx-auto px-3 sm:px-0'}>
                 <PostHeader/>
 
                 <p className="my-8 leading-7">
