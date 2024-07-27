@@ -27,21 +27,21 @@ export const Detail = () => {
                 </p>
 
                 <div className="flex flex-col gap-0 my-8">
-                    <h2 className="py-1 text-2xl font-semibold leading-7"> Simplified transition API </h2>
-                    <p className="my-5">We’ve made transitions way easier in v2.1 by adding a new transition prop to all of the built-in components you might want to transition, and adding data attributes for each transition stage so you can add transition styles by just throwing some classes on the target element:</p>
-                    <p className="my-5">We’ve made transitions way easier in v2.1 by adding a new transition prop to all of the built-in components you might want to transition, and adding data attributes for each transition stage so you can add transition styles by just throwing some classes on the target element:</p>
+                    <h2 className="py-1 text-xl font-semibold leading-7 sm:text-2xl"> Simplified transition API </h2>
+                    <p className="my-2 sm:my-5">We’ve made transitions way easier in v2.1 by adding a new transition prop to all of the built-in components you might want to transition, and adding data attributes for each transition stage so you can add transition styles by just throwing some classes on the target element:</p>
+                    <p className="my-2 sm:my-5">We’ve made transitions way easier in v2.1 by adding a new transition prop to all of the built-in components you might want to transition, and adding data attributes for each transition stage so you can add transition styles by just throwing some classes on the target element:</p>
                 </div>
 
                 <div className="flex flex-col gap-0 my-8">
-                    <h2 className="py-1 text-2xl font-semibold leading-7"> Simplified transition API </h2>
-                    <p className="my-5">We’ve made transitions way easier in v2.1 by adding a new transition prop to all of the built-in components you might want to transition, and adding data attributes for each transition stage so you can add transition styles by just throwing some classes on the target element:</p>
-                    <p className="my-5">We’ve made transitions way easier in v2.1 by adding a new transition prop to all of the built-in components you might want to transition, and adding data attributes for each transition stage so you can add transition styles by just throwing some classes on the target element:</p>
+                    <h2 className="py-1 text-xl font-semibold leading-7 sm:text-2xl"> Simplified transition API </h2>
+                    <p className="my-2 sm:my-5">We’ve made transitions way easier in v2.1 by adding a new transition prop to all of the built-in components you might want to transition, and adding data attributes for each transition stage so you can add transition styles by just throwing some classes on the target element:</p>
+                    <p className="my-2 sm:my-5">We’ve made transitions way easier in v2.1 by adding a new transition prop to all of the built-in components you might want to transition, and adding data attributes for each transition stage so you can add transition styles by just throwing some classes on the target element:</p>
                 </div>
 
                 <div className="flex flex-col gap-0 my-8">
-                    <h2 className="py-1 text-2xl font-semibold leading-7"> Simplified transition API </h2>
-                    <p className="my-5">We’ve made transitions way easier in v2.1 by adding a new transition prop to all of the built-in components you might want to transition, and adding data attributes for each transition stage so you can add transition styles by just throwing some classes on the target element:</p>
-                    <p className="my-5">We’ve made transitions way easier in v2.1 by adding a new transition prop to all of the built-in components you might want to transition, and adding data attributes for each transition stage so you can add transition styles by just throwing some classes on the target element:</p>
+                    <h2 className="py-1 text-xl font-semibold leading-7 sm:text-2xl"> Simplified transition API </h2>
+                    <p className="my-2 sm:my-5">We’ve made transitions way easier in v2.1 by adding a new transition prop to all of the built-in components you might want to transition, and adding data attributes for each transition stage so you can add transition styles by just throwing some classes on the target element:</p>
+                    <p className="my-2 sm:my-5">We’ve made transitions way easier in v2.1 by adding a new transition prop to all of the built-in components you might want to transition, and adding data attributes for each transition stage so you can add transition styles by just throwing some classes on the target element:</p>
                 </div>
 
                 <div className="flex flex-col gap-0 my-8">
