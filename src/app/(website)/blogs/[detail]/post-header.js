@@ -5,22 +5,22 @@ import Profle from "@/assets/images/profile.png"
 export const PostHeader = () => {
     return (
         <>
-            <div className="relative mt-24">
+            <div className="relative mt-5 sm:mt-24">
                 <div>
                     <div>Monday, July 1st 2014</div>
-                    <h1 className="mt-5 text-2xl font-bold">
+                    <h1 className="mt-2 text-xl font-bold sm:mt-5 sm:text-2xl">
                         Headless UI v2.1: Simplified transition API and improved multi-dialog support
                     </h1>
-                    <div className="flex items-center mt-5">
+                    <div className="flex items-center w-full mt-5">
                         <Image
                             src={Profle.src}
                             width={500}
                             height={500}
-                            alt="Picture of the author" className="object-cover rounded-full w-14 h-14"
+                            alt="Picture of the author" className="object-cover rounded-full w-9 aspect-square sm:w-12"
                         />
-                        <div className="ml-5">
-                            <p className="font-semibold leading-6">CHHEM Sithuch</p>
-                            <Link href="#" className="text-sky-500">@chhemsithuch</Link>
+                        <div className="ml-2 sm:ml-5">
+                            <p className="font-semibold leading-5 sm:leading-6">CHHEM Sithuch</p>
+                            <Link href="#" className="text-sm leading-4 line-clamp-1 sm:text-base text-sky-500">@chhemsithuch</Link>
                         </div>
                     </div>
                     <div className="mt-5">
