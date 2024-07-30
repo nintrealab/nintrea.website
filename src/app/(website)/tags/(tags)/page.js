@@ -8,6 +8,7 @@ export const viewport = dataViewport
 
 import { CardStack } from "@/components/card-stack";
 import { Hero } from "./hero";
+import { Topic } from "@/components/topic-tag";
 // import { Container } from "postcss";
 
 export default function CardStackDemo() {
@@ -15,17 +16,14 @@ export default function CardStackDemo() {
         <>
             <ContentBackground/>
             <Hero/>
-            <Container>
-                <div className="flex justify-center w-1/3 m-auto mt-0">
-                    <div className="flex items-center justify-center w-full m-2 h-72">
-                        <CardStack items={CARDS} />
-                    </div>
-                    <div className="flex items-center justify-center w-full m-2 h-72">
-                        <CardStack items={CARDS} />
-                    </div>
-                    <div className="flex items-center justify-center w-full m-2 h-72">
-                        <CardStack items={CARDS} />
-                    </div>
+            
+            <Container className="max-w-5xl items-center justify-center">
+                <Topic/>
+                <h2 className="text-4xl font-extrabold tracking-tight text-center text-slate-900 sm:text-5xl lg:text-6xl dark:text-white h-[5rem] mt-20 mb-10 text-foreground">Main Card</h2>
+                <div className="grid gap-4 grid-cols-1 m-5 sm:grid-cols-2 lg:grid-cols-3">
+                    <CardStack items={CARDS} />
+                    <CardStack items={CARDS} />
+                    <CardStack items={CARDS} />
                 </div>
             </Container>
             <Footer/>
