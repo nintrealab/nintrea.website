@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link";
 import { Button } from "./button";
 import { Container } from "./container";
 
@@ -27,7 +28,14 @@ export const Topic =()=>{
                     <li className="hover:bg-accent hover:text-accent-foreground cursor-pointer dark:hover:bg-blue-200/20 m-1">tags for new tester and doctor</li>
                     <li className="hover:bg-accent hover:text-accent-foreground cursor-pointer dark:hover:bg-blue-200/20 m-1">About testing tags for new tester </li>
                     <li className="hover:bg-accent hover:text-accent-foreground cursor-pointer dark:hover:bg-blue-200/20 m-1">About testing tags for new tester About testing</li>
-
+                    <Link  className="flex items-center text-[10px] sm:font-medium sm:text-sm from-left text-primary" href="/tags/test-blogs">
+                        <span className="relative text-xs bg-transparent rounded-2xl sm:text-sm">
+                            Read more<span className="sr-only">{"SDSDSK"}</span>
+                        </span>
+                        <svg className="relative mt-px overflow-visible ml-2.5 text-primary/90 dark:text-primary" width="3" height="6" viewBox="0 0 3 6" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                            <path d="M0 0L3 3L0 6"></path>
+                        </svg>
+                    </Link>
 
 
 
