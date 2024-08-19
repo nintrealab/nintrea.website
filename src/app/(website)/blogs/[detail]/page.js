@@ -8,10 +8,15 @@ import { viewport as dataViewport } from "@/data/meta";
 import { GridBackground } from "../../(home)/background";
 import Image from "next/image";
 import { LOGO } from "@/data/assets";
+import data from "@/data/post.json"
+import { Post } from "@/components/post";
+
 export const viewport = dataViewport
 
 export const Detail = () => {
     const { detail } = useParams()
+    console.log(data);
+
     return (
         <>
             <GridBackground/>
@@ -19,39 +24,22 @@ export const Detail = () => {
                 maskImage: "linear-gradient(to bottom, transparent, black)",
                 WebkitMaskImage: "linear-gradient(to bottom, transparent, black)"
             }}></div>
+
             <Container className={'max-w-4xl mx-auto px-3 sm:px-0'}>
-                <PostHeader/>
 
-                <p className="my-8 leading-7">
-                    We just released Headless UI v2.1 for React, which dramatically simplifies our transition APIs and adds support for rendering multiple dialogs as siblings.
-                </p>
+                {/* Post Header */}
+                <PostHeader data={{
+                    title: data.title,
+                    authors: [...data?.authors],
+                    date: data.create_date,
+                    coverImage: "/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fprofile.6ddb36ab.png&w=640&q=75",
+                    tags: data.tags,
+                    readingTime: 5
+                }}/>
 
-                <div className="flex flex-col gap-0 my-8">
-                    <h2 className="py-1 text-xl font-semibold leading-7 sm:text-2xl"> Simplified transition API </h2>
-                    <p className="my-2 sm:my-5">We’ve made transitions way easier in v2.1 by adding a new transition prop to all of the built-in components you might want to transition, and adding data attributes for each transition stage so you can add transition styles by just throwing some classes on the target element:</p>
-                    <p className="my-2 sm:my-5">We’ve made transitions way easier in v2.1 by adding a new transition prop to all of the built-in components you might want to transition, and adding data attributes for each transition stage so you can add transition styles by just throwing some classes on the target element:</p>
-                </div>
-
-                <div className="flex flex-col gap-0 my-8">
-                    <h2 className="py-1 text-xl font-semibold leading-7 sm:text-2xl"> Simplified transition API </h2>
-                    <p className="my-2 sm:my-5">We’ve made transitions way easier in v2.1 by adding a new transition prop to all of the built-in components you might want to transition, and adding data attributes for each transition stage so you can add transition styles by just throwing some classes on the target element:</p>
-                    <p className="my-2 sm:my-5">We’ve made transitions way easier in v2.1 by adding a new transition prop to all of the built-in components you might want to transition, and adding data attributes for each transition stage so you can add transition styles by just throwing some classes on the target element:</p>
-                </div>
-
-                <div className="flex flex-col gap-0 my-8">
-                    <h2 className="py-1 text-xl font-semibold leading-7 sm:text-2xl"> Simplified transition API </h2>
-                    <p className="my-2 sm:my-5">We’ve made transitions way easier in v2.1 by adding a new transition prop to all of the built-in components you might want to transition, and adding data attributes for each transition stage so you can add transition styles by just throwing some classes on the target element:</p>
-                    <p className="my-2 sm:my-5">We’ve made transitions way easier in v2.1 by adding a new transition prop to all of the built-in components you might want to transition, and adding data attributes for each transition stage so you can add transition styles by just throwing some classes on the target element:</p>
-                </div>
-
-                <div className="flex flex-col gap-0 my-8">
-                    <Image
-                        src={LOGO.src}
-                        width={500}
-                        height={500}
-                        alt="Picture of the author" className="object-cover w-full rounded-lg aspect-video justify-items-center"
-                    />
-                </div>
+                {data?.content && data?.content.map( (item, key) => {
+                    return <Post key={key} type={item.type} text={item.text} {...item?.properties}></Post>
+                })}
 
                 <Footer/>
             </Container>
