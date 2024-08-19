@@ -1,5 +1,6 @@
 {
     "name": "will-be-url",
+    "create_date": "Monday, July 1st 2014",
     "title": "Headless UI v2.1: Simplified transition API and improved multi-dialog support",
     "descriptions": "Headless UI v2.1: Simplified transition API and improved multi-dialog support",
     "breadcrumbs": [
@@ -7,43 +8,42 @@
         { "title": "Get Started", "route": "/doc" },
         { "title": "Installations", "route": "/doc/installations" }
     ],
+    "tags": [
+        "React",
+        "Headless UI",
+        "Transition API",
+        "Multi-dialog support"
+    ],
     "authors": [
-        { "title": "Leat Sophat", "username": "@leatsophat", "profile": "https://github.com/pphatdev.png" },
-        { "title": "Chhem Sithuch", "username": "@chhemsithuch", "profile": "https://github.com/pphatdev.png" }
+        { "name": "Leat Sophat", "username": "leatsophat", "avatar": "https://github.com/pphatdev.png" },
+        { "name": "Chhem Sithuch", "username": "chhemsithuch", "avatar": "https://github.com/sithuch.png" }
     ],
     "content": [
         {
-            "type": "image",
-            "text": "Sample Image",
-            "src": "https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+            "type": "p",
+            "text": "We just released Headless UI v2.1 for React, which dramatically simplifies our transition APIs and adds support for rendering multiple dialogs as siblings."
         },
         {
             "type": "p",
-            "text": "This is sample paragraph text for the project"
+            "text": "We just released Headless UI v2.1 for React, which dramatically simplifies our transition APIs and adds support for rendering multiple dialogs as siblings."
         },
         {
             "type": "h2",
-            "text": "Heading 2 title"
+            "text": "Simplified transition API"
         },
         {
-            "type": "h3",
-            "text": "Heading 3 title"
+            "type": "image",
+            "text": "Sample Image",
+            "properties": {
+                "width": 512,
+                "height": 100,
+                "className": "aspect-video",
+                "src": "https://images.unsplash.com/photo-1504639650150-bf773680d8c3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            }
         },
         {
-            "type": "h4",
-            "text": "Heading 4 title"
-        },
-        {
-            "type": "h5",
-            "text": "Heading 5 title"
-        },
-        {
-            "type": "h6",
-            "text": "Heading 6 title"
-        },
-        {
-            "type": "section",
-            "items": "We got some paragraph here. This is sample paragraph text for the project"
+            "type": "p",
+            "text": "We got some paragraph here. This is sample paragraph text for the project"
         }
 
     ]
