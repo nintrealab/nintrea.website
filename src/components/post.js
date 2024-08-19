@@ -1,3 +1,4 @@
+import { cn } from "@/lib/utils";
 import Image from "next/image";
 
 // Post Heading Elements
@@ -95,7 +96,7 @@ const Paragraph = ({ text, ...prop }, key) => {
 const Img = ({ text, ...prop }, key) => {
     return (
         <div key={key} id={String(text).replace(/\s+/g, "-").toLocaleLowerCase()} className="flex flex-col items-center justify-center w-full">
-            <Image { ...prop } alt={text} width={512} height={512} className="object-cover w-full mt-7 rounded-2xl" />
+            <Image { ...prop } alt={text} width={parseFloat(prop?.width ?? 512)} height={parseFloat(prop?.height ?? 512)} className={cn( 'object-cover w-full h-full mt-7 rounded-2xl', prop?.className)} />
             <p className="text-center text-slate-700 dark:text-slate-400">{text || prop.alt}</p>
         </div>
     )
