@@ -1,37 +1,58 @@
 import Image from "next/image";
 import Link from "next/link";
-import Profle from "@/assets/images/profile.png"
 
-export const PostHeader = () => {
+export const PostHeader = ({ data }) => {
+
     return (
         <>
             <div className="relative mt-5 sm:mt-24">
                 <div>
-                    <div>Monday, July 1st 2014</div>
+                    {/* Date */}
+
+                    <datetime date={data?.date}>{data?.date}</datetime>
+                    {/* Tags */}
+                    <ul className="flex items-center justify-start w-full gap-4 mt-3">
+                        {data?.tags?.map((tag, key) => {
+                            return <li key={key} >
+                                <Link href="#" className="relative text-sm cursor-pointer text-primary">
+                                    {tag}
+                                    <span className="absolute inset-0 -left-1 w-[calc(100%_+1rem)] h-[calc(100%_+0.5rem)] -m-1 transition-all rounded-md hover:bg-foreground/10"></span>
+                                </Link>
+                            </li>
+                        })}
+                    </ul>
                     <h1 className="mt-2 text-xl font-bold sm:mt-5 sm:text-2xl">
-                        Headless UI v2.1: Simplified transition API and improved multi-dialog support
+                        {data?.title}
                     </h1>
-                    <div className="flex items-center w-full mt-5">
-                        <Image
-                            src={Profle.src}
-                            width={500}
-                            height={500}
-                            alt="Picture of the author" className="object-cover rounded-full w-9 aspect-square sm:w-12"
-                        />
-                        <div className="ml-2 sm:ml-5">
-                            <p className="font-semibold leading-5 sm:leading-6">CHHEM Sithuch</p>
-                            <Link href="#" className="text-sm leading-4 line-clamp-1 sm:text-base text-sky-500">@chhemsithuch</Link>
-                        </div>
+
+                    <div className="flex items-center justify-start w-full gap-6">
+                        {data?.authors?.map((author, key) => {
+                            return (
+                                <div className="flex items-center mt-5" key={key}>
+                                    <Image
+                                        src={author.avatar}
+                                        width={500}
+                                        height={500}
+                                        alt="Picture of the author" className="object-cover rounded-full w-9 aspect-square sm:w-12"
+                                    />
+                                    <div className="ml-2 sm:ml-4">
+                                        <p className="font-semibold leading-5 sm:leading-6">{ author?.name }</p>
+                                        <Link href="#" className="text-sm leading-4 line-clamp-1 sm:text-base text-sky-500">{`@`}{ author?.username }</Link>
+                                    </div>
+                                </div>
+                            )
+                        })}
                     </div>
                     <div className="mt-5">
                         <Image
-                            src={Profle.src}
+                            src={data.coverImage}
                             width={500}
                             height={500}
                             alt="Picture of the author" className="object-cover w-full rounded-xl aspect-video justify-items-center"
                         />
                     </div>
                 </div>
+
             </div>
         </>
     );
