@@ -3,11 +3,12 @@ import { Container } from "@/components/container";
 import { useParams } from "next/navigation";
 import { ProfileHero } from "./hero";
 import Link from "next/link";
-import { ListArticles } from "../(website)/blogs/(blogs)/list-articles";
 import { authors } from "@/data/authors";
 import { viewport as dataViewport } from "@/data/meta";
 import { SmallScreenHero } from "./small-screen-hero";
 import { CardEffect } from "@/components/card-effect";
+import { Article, LoadingArticle } from "../(website)/blogs/(blogs)/article";
+import { useEffect, useState } from "react";
 export const viewport = dataViewport
 
 export default function AuthorName()
@@ -15,6 +16,24 @@ export default function AuthorName()
     const router    = useParams()
     const username  = router.username.replaceAll(/\%40+/g, '')
     const author    = authors.find(a => a.username.replaceAll(/\@+/g, '') === username)
+
+    const [data, setData] = useState([]);
+    const [isLoading, setLoading] = useState(true);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const response = await fetch('http://localhost:3000/data/blogs.json');
+                const currentData = await response.json();
+                setData(currentData.result);
+                setLoading(false);
+            } catch (error) {
+                console.error('Error fetching data:', error);
+                setLoading(false);
+            }
+        };
+        fetchData();
+    }, []);
 
     return (
         <>
@@ -39,8 +58,8 @@ export default function AuthorName()
                             <SmallScreenHero data={ author }/>
                         </Container>
 
-                        <div className="relative">
-                            <div className="sticky z-10 w-full px-3 mx-auto mt-5 transition-all top-1 sm:top-3 border-foreground/10 scroll-smooth">
+                        <div className="relative w-full max-w-7xl">
+                            <div className="sticky z-10 w-full px-3 mx-auto mt-5 transition-all rounded-md bg-background/30 backdrop-blur-sm top-1 sm:top-3 border-foreground/10 scroll-smooth">
                                 <Container className={'max-w-7xl py-2 sm:py-2 sm:px-3 xl:px-8 overflow-hidden bg-background/90 sm:bg-transparent rounded-xl sm:rounded-none border sm:border-none backdrop-blur-sm sm:backdrop-blur-none'}>
                                     <ul role="menubar" className="flex items-center justify-start px-3 text-xs sm:px-0 sm:text-base gap-x-4">
                                         <li role="menuitem"> <Link href="#posts"> <span className="text-base">✍️</span> Posts </Link> </li>
@@ -51,32 +70,41 @@ export default function AuthorName()
                             </div>
 
                             <section id="posts" className="pb-10 sm:border-t dark:divide-slate-200/5">
-                                <Container className={'max-w-7xl xl:px-6 py-0'}>
-                                    <h2 className="px-3 pt-12 pb-2 sm:pt-20">✍️ Posts</h2>
-                                </Container>
-                                <ListArticles className={'w-full max-w-7xl xs:px-4 sm:px-6 md:px-8 xl:px-12  md:grid-cols-4 mt-2 sm:mt-5'}/>
+                                <div className={"grid max-w-7xl xl:px-12 gap-2 mt-10 sm:gap-4 mx-auto sm:grid-cols-2 md:grid-cols-4 px-3"}>
+                                    {
+                                        isLoading
+                                        ? [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map( (_, key)=> {
+                                            return (
+                                                <CardEffect key={key}>
+                                                    <LoadingArticle/>
+                                                </CardEffect>
+                                            )
+                                        })
+                                        : Array.from(data).map( (post, key)=> {
+                                            return (
+                                                <CardEffect key={key}>
+                                                    <Article data={post}/>
+                                                </CardEffect>
+                                            )
+                                        })
+                                    }
+                                </div>
                             </section>
 
-                            <section id="achievement" className="pb-10 border-t dark:divide-slate-200/5">
-                                <Container className={'max-w-7xl xl:px-6 py-0'}>
-                                    <h2 className="px-3 pt-12 pb-2 sm:pt-20">🎉 Achievement</h2>
-                                </Container>
-                                <section className="relative w-full h-screen sm:h-[calc(100vh_-10rem)] pt-1 sm:pt-10 overflow-hidden">
+                            <section id="achievement" className="pb-10 dark:divide-slate-200/5">
+                                <div className="relative w-full h-screen max-w-7xl sm:h-[calc(100vh_-10rem)] pt-1 sm:pt-10 overflow-hidden">
                                     <CardEffect className={`bg-green-200 dark:bg-purple-950`}>
 
                                     </CardEffect>
-                                </section>
+                                </div>
                             </section>
 
-                            <section id="about" className="pb-10 border-t dark:divide-slate-200/5">
-                                <Container className={'max-w-7xl xl:px-6 py-0'}>
-                                    <h2 className="px-3 pt-12 pb-2 sm:pt-20">🪶 About</h2>
-                                </Container>
-                                <section className="relative w-full h-screen sm:h-[calc(100vh_-10rem)] pt-1 sm:pt-10 overflow-hidden">
+                            <section id="about" className="pb-10 mx-auto dark:divide-slate-200/5">
+                                <div className="relative max-w-7xl w-full h-screen sm:h-[calc(100vh_-10rem)] pt-1 sm:pt-10 overflow-hidden">
                                     <CardEffect className={`bg-green-200 dark:bg-purple-950`}>
 
                                     </CardEffect>
-                                </section>
+                                </div>
                             </section>
 
                         </div>
