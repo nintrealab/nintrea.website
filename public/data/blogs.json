@@ -1,0 +1,96 @@
+{
+    "title": "Headless UI v2.1: Simplified transition API and improved multi-dialog support",
+    "descriptions": "Headless UI v2.1: Simplified transition API and improved multi-dialog support",
+    "breadcrumbs": [
+        { "title": "Tags", "route": "/" },
+        { "title": "${title}", "route": "/doc/installations" }
+    ],
+    "tags": [
+        {
+            "title": "React",
+            "color": "#61DAFB",
+            "route": "/tags/react",
+            "active": false
+        },
+        {
+            "title": "Tailwindcss",
+            "color": "#61DAFB",
+            "route": "/tags/tailwindcss",
+            "active": true
+        }
+    ],
+    "result": [
+        {
+            "title": "Headless UI v2.1: Simplified transition API and improved multi-dialog support",
+            "description": "Headless UI v2.1: Simplified transition API and improved multi-dialog support",
+            "url": "/blogs/headless-ui-v2.1",
+            "thumbnail": "https://github.com/sithuch.png",
+            "tag": "React",
+            "author": "Leat Sophat",
+            "date": "2023-08-15"
+        },
+        {
+            "title": "Headless UI v2.1: Simplified transition API and improved multi-dialog support",
+            "description": "Headless UI v2.1: Simplified transition API and improved multi-dialog support",
+            "url": "/blogs/headless-ui-v2.1",
+            "thumbnail": "https://github.com/sithuch.png",
+            "tag": "React",
+            "author": "Leat Sophat",
+            "date": "2023-08-15"
+        },
+        {
+            "title": "Headless UI v2.1: Simplified transition API and improved multi-dialog support",
+            "description": "Headless UI v2.1: Simplified transition API and improved multi-dialog support",
+            "url": "/blogs/headless-ui-v2.1",
+            "thumbnail": "https://github.com/sithuch.png",
+            "tag": "React",
+            "author": "Leat Sophat",
+            "date": "2023-08-15"
+        },
+        {
+            "title": "Headless UI v2.1: Simplified transition API and improved multi-dialog support",
+            "description": "Headless UI v2.1: Simplified transition API and improved multi-dialog support",
+            "url": "/blogs/headless-ui-v2.1",
+            "thumbnail": "https://github.com/sithuch.png",
+            "tag": "React",
+            "author": "Leat Sophat",
+            "date": "2023-08-15"
+        },
+        {
+            "title": "Headless UI v2.1: Simplified transition API and improved multi-dialog support",
+            "description": "Headless UI v2.1: Simplified transition API and improved multi-dialog support",
+            "url": "/blogs/headless-ui-v2.1",
+            "thumbnail": "https://github.com/sithuch.png",
+            "tag": "React",
+            "author": "Leat Sophat",
+            "date": "2023-08-15"
+        },
+        {
+            "title": "Headless UI v2.1: Simplified transition API and improved multi-dialog support",
+            "description": "Headless UI v2.1: Simplified transition API and improved multi-dialog support",
+            "url": "/blogs/headless-ui-v2.1",
+            "thumbnail": "https://github.com/sithuch.png",
+            "tag": "React",
+            "author": "Leat Sophat",
+            "date": "2023-08-15"
+        },
+        {
+            "title": "Headless UI v2.1: Simplified transition API and improved multi-dialog support",
+            "description": "Headless UI v2.1: Simplified transition API and improved multi-dialog support",
+            "url": "/blogs/headless-ui-v2.1",
+            "thumbnail": "https://github.com/sithuch.png",
+            "tag": "React",
+            "author": "Leat Sophat",
+            "date": "2023-08-15"
+        },
+        {
+            "title": "Headless UI v2.1: Simplified transition API and improved multi-dialog support",
+            "description": "Headless UI v2.1: Simplified transition API and improved multi-dialog support",
+            "url": "/blogs/headless-ui-v2.1",
+            "thumbnail": "https://github.com/sithuch.png",
+            "tag": "React",
+            "author": "Leat Sophat",
+            "date": "2023-08-15"
+        }
+    ]
+}
