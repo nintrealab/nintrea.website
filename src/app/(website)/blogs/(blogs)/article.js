@@ -99,7 +99,7 @@ export const LoadingArticle = ({ data }) => {
 
 export const Article = ({ data }) => {
 
-    const stringDate = data?.meta?.createdAt
+    const stringDate = data?.date
     const date = parseISO(stringDate)
 
     return (
@@ -136,7 +136,7 @@ export const Article = ({ data }) => {
                     </Link>
                 </div>
 
-                <Link className="absolute inset-0 bg-transparent sm:hidden" href="/blogs/title-blogs">
+                <Link className="absolute inset-0 bg-transparent sm:hidden" href={data?.url}>
                     <span className="sr-only">{data?.title}</span>
                 </Link>
             </div>
