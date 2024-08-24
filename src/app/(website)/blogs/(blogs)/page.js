@@ -36,25 +36,25 @@ export default function Blogs() {
             <Hero/>
 
             <Container>
-            <div className={cn("grid max-w-5xl gap-2 sm:gap-4 mx-auto sm:grid-cols-2 md:grid-cols-3 px-3")}>
-                {
-                    isLoading
-                    ? [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map( (_, key)=> {
-                        return (
-                            <CardEffect key={key}>
-                                <LoadingArticle/>
-                            </CardEffect>
-                        )
-                    })
-                    : Array.from(data).map( (post, key)=> {
-                        return (
-                            <CardEffect key={key}>
-                                <Article data={post}/>
-                            </CardEffect>
-                        )
-                    })
-                }
-            </div>
+                <div className={cn("grid max-w-5xl gap-2 sm:gap-4 mx-auto sm:grid-cols-2 md:grid-cols-3 px-3")}>
+                    {
+                        isLoading
+                        ? [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map( (_, key)=> {
+                            return (
+                                <CardEffect key={key}>
+                                    <LoadingArticle/>
+                                </CardEffect>
+                            )
+                        })
+                        : Array.from(data).map( (post, key)=> {
+                            return (
+                                <CardEffect key={key}>
+                                    <Article data={post}/>
+                                </CardEffect>
+                            )
+                        })
+                    }
+                </div>
                 <Footer/>
             </Container>
         </>
