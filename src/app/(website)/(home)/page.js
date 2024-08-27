@@ -12,16 +12,31 @@ import { PinBottomIcon, QuoteIcon } from "@radix-ui/react-icons";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import { Article, LoadingArticle } from "../blogs/(blogs)/article";
 export const viewport = dataViewport
 
 export default function Home() {
 
     const router = useRouter()
 
-    // Scroll to id target id existing hash
+    const [data, setData] = useState([]);
+    const [isLoading, setLoading] = useState(true);
+
     useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const response = await fetch('http://localhost:3000/data/blogs.json');
+                const currentData = await response.json();
+                setData(currentData.result);
+                setLoading(false);
+            } catch (error) {
+                console.error('Error fetching data:', error);
+                setLoading(false);
+            }
+        };
+        fetchData();
         router.push(window.location.hash)
-    }, [ router ])
+    }, [router]);
 
     return (
         <>
@@ -113,7 +128,25 @@ export default function Home() {
                             <span className="absolute -bottom-0 left-[1.125rem] h-px w-[calc(100%-2.25rem)] bg-gradient-to-r from-emerald-400/0 via-emerald-400/90 to-emerald-400/0 transition-opacity duration-500 group-hover:opacity-40"></span>
                         </Button>
                     </div>
-                    <ListArticles/>
+                    <div className={"grid max-w-5xl gap-2 sm:gap-4 mx-auto sm:grid-cols-2 md:grid-cols-3 px-3"}>
+                        {
+                            isLoading
+                            ? [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map( (_, key)=> {
+                                return (
+                                    <CardEffect key={key}>
+                                        <LoadingArticle/>
+                                    </CardEffect>
+                                )
+                            })
+                            : Array.from(data).map( (post, key)=> {
+                                return (
+                                    <CardEffect key={key}>
+                                        <Article data={post}/>
+                                    </CardEffect>
+                                )
+                            })
+                        }
+                    </div>
 
                 </section>
 
