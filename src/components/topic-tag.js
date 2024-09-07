@@ -1,44 +1,53 @@
 "use client"
 
 import Link from "next/link";
-import { Button } from "./button";
 import { Container } from "./container";
+import { useEffect, useState } from "react";
+import { CardEffect } from "./card-effect";
+import { Article } from "@/app/(website)/blogs/(blogs)/article";
+// import {} from ""
 
+// console.log(/data/blogs);
 export const Topic =()=>{
+    
+const    [data, setData] = useState([]);
+const [isLoading, setLoading] = useState(true);
+useEffect(() => {
+    const fetchData = async () => {
+        try {
+            const response = await fetch('http://localhost:3000/data/blogs.json');
+            const currentData = await response.json();
+            // console.log(currentData.tags);
+            setData(currentData.tags);
+            setLoading(false);
+        } catch (error) {
+            console.error('Error fetching data:', error);
+            setLoading(false);
+        }
+    };
+    fetchData();
+}, [setData, setLoading]); // Add dependencies
+// console.log(data)
+// console.log(data); // Log the actual data
     return(
         <>
+   
         <Container className=" flex items-center justify-center max-w-5xl ">
             <div className="flex items-center justify-center max-w-5xl ">
-                <ul class="flex flex-wrap  items-center justify-center *:rounded-full *:border *:border-sky-100 *:bg-sky-50 *:px-3 *:py-1 gap-2  dark:text-sky-300 dark:*:border-sky-500/15 dark:*:bg-sky-500/10 ">
-                    <li className="hover:bg-accent hover:text-accent-foreground cursor-pointer dark:hover:bg-blue-200/20 m-1">Sales</li>
-                    <li className="hover:bg-accent hover:text-accent-foreground cursor-pointer dark:hover:bg-blue-200/20 m-1">Marketing</li>
-                    <li className="hover:bg-accent hover:text-accent-foreground cursor-pointer dark:hover:bg-blue-200/20 m-1">SEO</li>
-                    <li className="hover:bg-accent hover:text-accent-foreground cursor-pointer dark:hover:bg-blue-200/20 m-1">bLOCK A</li>
-                    <li className="hover:bg-accent hover:text-accent-foreground cursor-pointer dark:hover:bg-blue-200/20 m-1">Block History</li>
-                    <li className="hover:bg-accent hover:text-accent-foreground cursor-pointer dark:hover:bg-blue-200/20 m-1">Block S21</li>
-                    <li className="hover:bg-accent hover:text-accent-foreground cursor-pointer dark:hover:bg-blue-200/20 m-1">Block WW2</li>
-                    <li className="hover:bg-accent hover:text-accent-foreground cursor-pointer dark:hover:bg-blue-200/20 m-1">About </li>
-                    <li className="hover:bg-accent hover:text-accent-foreground cursor-pointer dark:hover:bg-blue-200/20 m-1">Author</li>
-                    <li className="hover:bg-accent hover:text-accent-foreground cursor-pointer dark:hover:bg-blue-200/20 m-1">Angkor</li>
-                    <li className="hover:bg-accent hover:text-accent-foreground cursor-pointer dark:hover:bg-blue-200/20 m-1">Gentlment</li>
-                    <li className="hover:bg-accent hover:text-accent-foreground cursor-pointer dark:hover:bg-blue-200/20 m-1">Laydy</li>
-                    <li className="hover:bg-accent hover:text-accent-foreground cursor-pointer dark:hover:bg-blue-200/20 m-1">Block S21</li>
-                    <li className="hover:bg-accent hover:text-accent-foreground cursor-pointer dark:hover:bg-blue-200/20 m-1">Block WW2</li>
-                    <li className="hover:bg-accent hover:text-accent-foreground cursor-pointer dark:hover:bg-blue-200/20 m-1">About </li>
-                    <li className="hover:bg-accent hover:text-accent-foreground cursor-pointer dark:hover:bg-blue-200/20 m-1">tags for new tester and doctor</li>
-                    <li className="hover:bg-accent hover:text-accent-foreground cursor-pointer dark:hover:bg-blue-200/20 m-1">About testing tags for new tester </li>
-                    <li className="hover:bg-accent hover:text-accent-foreground cursor-pointer dark:hover:bg-blue-200/20 m-1">About testing tags for new tester About testing</li>
-                    <Link  className="flex items-center text-[10px] sm:font-medium sm:text-sm from-left text-primary" href="/tags/test-blogs">
-                        <span className="relative text-xs bg-transparent rounded-2xl sm:text-sm">
-                            Read more<span className="sr-only">{"SDSDSK"}</span>
-                        </span>
-                        <svg className="relative mt-px overflow-visible ml-2.5 text-primary/90 dark:text-primary" width="3" height="6" viewBox="0 0 3 6" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                            <path d="M0 0L3 3L0 6"></path>
-                        </svg>
-                    </Link>
-
-
-
+                <ul className   =" flex flex-wrap  items-center justify-center ">
+                    {
+                        Array.from(data).map((post,key)=>{
+                            return (
+                                <li key={key} className="rounded-2xl bg-primary cursor-pointer hover:bg-primary-foreground m-1 ">
+                                <Link  className=" text-xs flex items-center" href={post.route}>
+                                    <span className="text-xs rounded-2xl sm:text-sm ring-1 bg-primary-foreground hover:bg-primary/10 px-2 py-1">
+                                    {post.title}<span className="sr-only">{"SDSDSK"}</span>
+                                    </span>
+                                </Link>
+                                </li>
+                            )
+                        })
+                    }    
                 </ul>
             </div>
          </Container>
