@@ -12,7 +12,6 @@ export const Topic =()=>{
     
 const    [data, setData] = useState([]);
 const [isLoading, setLoading] = useState(true);
-
 useEffect(() => {
     const fetchData = async () => {
         try {
@@ -39,9 +38,9 @@ useEffect(() => {
                     {
                         Array.from(data).map((post,key)=>{
                             return (
-                                <li className="rounded-2xl bg-primary cursor-pointer hover:bg-primary-foreground m-1 ">
+                                <li key={key} className="rounded-2xl bg-primary cursor-pointer hover:bg-primary-foreground m-1 ">
                                 <Link  className=" text-xs flex items-center" href={post.route}>
-                                    <span  key={key} className="text-xs rounded-2xl sm:text-sm ring-1 bg-primary-foreground hover:bg-primary/10 px-2 py-1">
+                                    <span className="text-xs rounded-2xl sm:text-sm ring-1 bg-primary-foreground hover:bg-primary/10 px-2 py-1">
                                     {post.title}<span className="sr-only">{"SDSDSK"}</span>
                                     </span>
                                 </Link>
