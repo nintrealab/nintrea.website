@@ -10,94 +10,10 @@
             "title": "React",
             "color": "#61DAFB",
             "route": "/tags/react",
-            "active": true
+            "active": false
         },
         {
             "title": "Tailwindcss",
-            "color": "#61DAFB",
-            "route": "/tags/tailwindcss",
-            "active": true
-        },
-        {
-            "title": "Reaction",
-            "color": "#61DAFB",
-            "route": "/tags/react",
-            "active": true
-        },
-        {
-            "title": "Css",
-            "color": "#61DAFB",
-            "route": "/tags/tailwindcss",
-            "active": true
-        },
-        {
-            "title": "Sass",
-            "color": "#61DAFB",
-            "route": "/tags/react",
-            "active": true
-        },
-        {
-            "title": "Next.js",
-            "color": "#61DAFB",
-            "route": "/tags/tailwindcss",
-            "active": true
-        },
-        {
-            "title": "Nuxt.js",
-            "color": "#61DAFB",
-            "route": "/tags/react",
-            "active": true
-        },
-        {
-            "title": "Get",
-            "color": "#61DAFB",
-            "route": "/tags/tailwindcss",
-            "active": true
-        },
-        {
-            "title": "Post",
-            "color": "#61DAFB",
-            "route": "/tags/react",
-            "active": true
-        },
-        {
-            "title": "Alter",
-            "color": "#61DAFB",
-            "route": "/tags/tailwindcss",
-            "active": true
-        },
-        {
-            "title": "Deleted",
-            "color": "#61DAFB",
-            "route": "/tags/react",
-            "active": true
-        },
-        {
-            "title": "Update",
-            "color": "#61DAFB",
-            "route": "/tags/tailwindcss",
-            "active": true
-        },
-        {
-            "title": "Set",
-            "color": "#61DAFB",
-            "route": "/tags/react",
-            "active": true
-        },
-        {
-            "title": "Bootstap",
-            "color": "#61DAFB",
-            "route": "/tags/tailwindcss",
-            "active": true
-        },
-        {
-            "title": "Java",
-            "color": "#61DAFB",
-            "route": "/tags/react",
-            "active": true
-        },
-        {
-            "title": "JavaScript",
             "color": "#61DAFB",
             "route": "/tags/tailwindcss",
             "active": true
