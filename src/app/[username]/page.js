@@ -23,7 +23,7 @@ export default function AuthorName()
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch('http://localhost:3000/data/blogs.json');
+                const response = await fetch('/data/blogs.json');
                 const currentData = await response.json();
                 setData(currentData.result);
                 setLoading(false);
