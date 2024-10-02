@@ -1,0 +1,120 @@
+{
+    "title": "Sample Post",
+    "breadcrumbs": [
+        { "title": "Home", "route": "/" },
+        { "title": "Get Started", "route": "/" }
+    ],
+    "authors": [
+        { "title": "Sophat LEAT", "avatar": "https://github.com/pphatdev.png", "username": "pphatdev" }
+    ],
+    "content": [
+        {
+            "type": "p",
+            "text": "The project was created to display all the files of various libraries created by the Turbotech Developer Team. This project is called `SmartERP Component`. Any installation or other use of the created Library will be displayed in this Project, categorized by Library."
+        },
+        {
+            "type": "image",
+            "src": "https://turbotech.gitbook.io/~gitbook/image?url=https%3A%2F%2F868272446-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FYR5c0a9XvTkGUPJXw69m%252Fuploads%252FCa2wISmqBA0YVubT7ypq%252Fsmart-component.png%3Falt%3Dmedia%26token%3D99eea72e-3161-4c46-8f21-bf1f0e1a18de&width=768&dpr=1&quality=100&sign=d54406ef&sv=1"
+        },
+        {
+            "type": "h2",
+            "text": "Project Repository"
+        },
+        {
+            "type": "p",
+            "text": "For developer can find the project repository, please visit the following link: [https://github.com/turbotechlabs/smart-component](https://github.com/turbotechlabs/smart-component)."
+        },
+        {
+            "type": "h2",
+            "text": "Developer Usage"
+        },
+        {
+            "type": "h3",
+            "text": "Clone Project"
+        },
+        {
+            "type": "p",
+            "text": "To clone project from GitHub:"
+        },
+        {
+            "type": "code",
+            "text": "git clone https://username@github.com/turbotechlabs/smart-component.git"
+        },
+        {
+            "type": "p",
+            "text": "Goto project:"
+        },
+        {
+            "type": "code",
+            "text": "cd smart-component"
+        },
+        {
+            "type": "p",
+            "text": "Service Composer Setup:"
+        },
+        {
+            "type": "code",
+            "text": "composer install"
+        },
+        {
+            "type": "p",
+            "text": "Service npm package setup:"
+        },
+        {
+            "type": "code",
+            "text": "npm install"
+        },
+        {
+            "type": "p",
+            "text": "Duplicate example.env file:"
+        },
+        {
+            "type": "code",
+            "text": "cp .env.example .env"
+        },
+        {
+            "type": "p",
+            "text": "Generate Key for the environment file:"
+        },
+        {
+            "type": "code",
+            "text": "php artisan key:generate"
+        },
+        {
+            "type": "p",
+            "text": "Realtime Sevice Development:"
+        },
+        {
+            "type": "code",
+            "text": "php artisan serve"
+        },
+        {
+            "type": "p",
+            "text": "Realtime Development:"
+        },
+        {
+            "type": "code",
+            "text": "npm start"
+        },
+        {
+            "type": "p",
+            "text": "Production Build:"
+        },
+        {
+            "type": "code",
+            "text": "npm run prod"
+        },
+        {
+            "type": "h2",
+            "text": "Contributers"
+        },
+        {
+            "type": "table",
+            "text": "| Param | Value | Use for |\n|-------|-------|---------|\n| `selector` | none | Require table (class, id, attr, tag) you want to export |\n| `fileName` | Excel | Set excel file name |\n| `sheetName` | fileName | Set excel sheet name |\n| `title` | fileName | Set header title |\n| `titleKh` | none | Set header Khmer title |\n| `subtitle` | none | Set header Subtitle |\n| `dateFrom` | null | Set date from in header |\n| `dateTo` | null | Set date to in header |\n| `customDate` | null | Customize date you want (HTML, CSS) |\n| `extension` | .xls | Set excel extension |\n| `select` | true | Show or hide select tag when export |\n| `checkbox` | true | Show or hide checkbox when export |\n| `fontSize` | 15px | Set excel font size |\n| `fontHeadEn` | Times New Roman | Set excel header font-family title |\n| `fontHeadKh` | Khmer OS Muol Light | Set excel header font-family Khmer title |\n| `removeCell` | none | Remove item(s) with (class, id, attr, tag) |\n| `zoom` | 100 | Set zoom percent when export |\n| `image{src}` | none | Set header image url |\n| `image{width}` | 133 | Set header image width |\n| `image{height}` | auto | Set header image height |\n| `image{alt}` | Turbotech | Set header image alt |\n| `border` | none | Set table border width (thin, 1px, etc) |\n| `borderStyle` | none | Set table border style (solid, dotted, double, etc) |\n| `borderColor` | none | Set table border color (rgb, hex, etc) |\n| `tableBorder` | none | Set only table border outside |\n| `setTopTheadHTML` | none | Customize header on top of table (HTML, CSS) |\n| `setTheadHTML` | none | Customize table's thead (HTML, CSS) |\n| `setTfootHTML` | none | Customize table's footer (HTML, CSS) |\n| `setHeaderHTML` | none | Customize header (HTML, CSS) |\n| `setFooterHTML` | none | Customize footer (HTML, CSS) |\n| `footer{show}` | false | Show or hide footer for signature |\n| `footer{topstart}` | 1 | Set top start point from table |\n| `footer{leftspan}` | 1 | Set signature left span |\n| `footer{rightspan}` | 1 | Set signature right span |\n| `footer{inner}` | true | Set inner table footer (include border with table) |"
+        },
+        {
+            "type": "p",
+            "text": "![ ](https://contrib.rocks/image?repo=pphatdev/leatsophat.me)"
+        }
+    ]
+}
