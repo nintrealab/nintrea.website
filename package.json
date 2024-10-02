@@ -28,9 +28,12 @@
     "next-i18n-router": "^5.5.0",
     "next-themes": "^0.3.0",
     "nextjs-toploader": "^1.6.12",
+    "notion-utils": "^6.16.0",
     "react": "^18",
     "react-dom": "^18",
+    "react-notion-x": "^6.16.0",
     "sharp": "^0.33.4",
+    "shiki": "^1.21.0",
     "tailwind-merge": "^2.4.0",
     "tailwindcss-animate": "^1.0.7"
   },
