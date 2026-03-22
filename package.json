@@ -24,7 +24,7 @@
     "fs": "^0.0.1-security",
     "glob": "^10.4.2",
     "mini-svg-data-uri": "^1.4.4",
-    "next": "14.2.14",
+    "next": "16.2.1",
     "next-i18n-router": "^5.5.0",
     "next-themes": "^0.3.0",
     "nextjs-toploader": "^1.6.12",
